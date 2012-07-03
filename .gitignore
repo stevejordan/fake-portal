@@ -17,6 +17,6 @@ test/version_tmp
 tmp
 *.DS_Store
 marketing/.sass-cache/*
-.sass-cache/*
+css/.sass-cache/*
 *~
-css/sass
+css/sass/*
