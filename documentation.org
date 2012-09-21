@@ -1,0 +1,49 @@
+Documentation for the client side "portal" page
+
+* Architechture
+  From front to back end.
+
+  1. Source --> 2. php on webapps --> Matrix rest resource --> backbone.js on client
+
+  the client side script (using backbone.js) makes a request to matrix
+  (to obey same domain restrictions - this might become Apache
+  proxying in future), which makes a request to a php resource on
+  webapps.city, which is responsible for getting and caching the
+  source data.
+                               
+* Codebase
+  The frontend is done using [[http://backbonejs.org/][backbone.js]], which is an MV*
+  framework. It organises the code into models, collections and
+  views. The view is where the majority of the work is done. So far we
+  have the following models, collections and views:
+** models  
+*** Person
+*** Course
+*** Book  
+*** Hold  
+*** Fine  
+*** CalendarItem
+
+** collections
+*** CoursesCollection
+*** BooksCollection
+*** HoldsCollection
+*** FinesCollection
+*** AbstractCollection
+*** LibraryCollection
+*** Calendar
+
+** views
+*** FakePortalView
+    the 'main' view which kicks the app off
+*** PersonView
+    currently unused
+*** CourseView
+*** BookView
+*** HoldView
+*** FineView
+*** CalendarView
+
+
+* Data sources
+* Future data sources
