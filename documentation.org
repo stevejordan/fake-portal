@@ -46,4 +46,19 @@ Documentation for the client side "portal" page
 
 
 * Data sources
+
+** moodle
+   based on work done by Amanda using moodle2 api
+
+   Amanda's code is in msm2an0:/web/docs/webapps/moodle/portal
+   amends/overloads in msm2an0:/web/docs/webapps/matrix/services/portal-poc/index.php
+   These should be merged into better structured php
+
+   url Matrix hits is webapps.test.city.ac.uk/matrix/portal-poc/index.php
+
+** millenium
+   using UQL_Millenium classes to structure the liasing with millenuim api
+   work done in msm2an0:/web/docs/webapps/matrix/services/portal-poc/millenium-uql.php
+
 * Future data sources
+ 
