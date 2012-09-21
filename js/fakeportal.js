@@ -25,13 +25,7 @@ window.FP.debugging = location.search.match('debug') ? true : false;
             HoldView, FineView, CalendarView;
 
         //flesh out models
-        Person = Backbone.Model.extend({  });
-        Course = Backbone.Model.extend({  });
-        Book   = Backbone.Model.extend({  });
-        Hold   = Backbone.Model.extend({  });
-        Fine   = Backbone.Model.extend({  });
-        CalendarItem = Backbone.Model.extend({  });
-
+ 
         //flesh out collections
         AbstractCollection = Backbone.Collection.extend({
 
