@@ -1,11 +1,13 @@
 define([
-    'underscore', 'backbone', 'collections/abstract'
-], function( _, Backbone, AbstractCollection ) {
+    'collections/abstract', 'namespace'
+], function( AbstractCollection, ns ) {
 
     var LibraryCollection = AbstractCollection.extend({
+
         url: function () {
             return '/portal-poc/remote-services/millenium-api?request=' + this.requestString;
         },
+
         parse: function (response) {
 
             //error checking
@@ -16,6 +18,7 @@ define([
 
             return response.main.items;
         }
+
     });
 
     return LibraryCollection;

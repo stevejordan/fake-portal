@@ -1,7 +1,6 @@
 define([
     'backbone',
-    'underscore'
-], function( _, Backbone ) {
+], function( Backbone ) {
 
     var CalendarItem = Backbone.Model.extend({  });
 

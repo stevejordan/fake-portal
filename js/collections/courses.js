@@ -1,6 +1,6 @@
 define([
-    'underscore', 'backbone', 'collections/abstract'
-], function( _, Backbone, AbstractCollection ) {
+   'collections/abstract', 'views/fakeportal', 'models/course'
+], function( AbstractCollection, FakePortal, Course ) {
 
     var CoursesCollection = AbstractCollection.extend({
 
@@ -23,7 +23,7 @@ define([
 
             //render any messages
             if (response.messages) {
-                ns.FakePortal.trigger('message', response.messages);
+                FakePortal.trigger('message', response.messages);
             }
 
             return response.main.courses.other;

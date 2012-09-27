@@ -1,6 +1,6 @@
 define([
-    'underscore', 'backbone', 'collections/abstract'
-], function( _, Backbone, AbstractCollection ) {
+    'jquery', 'collections/abstract', 'models/calendarItem', 'views/fakeportal', 'helpers'
+], function( $, AbstractCollection, CalendarItem, FakePortal, Helpers ) {
 
     var Calendar = AbstractCollection.extend({
 
@@ -16,12 +16,12 @@ define([
 
             //ns.Helpers.debug('response from calendar query');
 
-            parsed = ns.Helpers.parseIcal(response.main.calendar.ical);
+            parsed = Helpers.parseIcal(response.main.calendar.ical);
             //ns.Helpers.debug(parsed);
 
             //render any messages
             if (response.messages) {
-                ns.FakePortal.trigger('message', response.messages);
+                FakePortal.trigger('message', response.messages);
             }
 
             return parsed;

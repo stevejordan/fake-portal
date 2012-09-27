@@ -1,7 +1,6 @@
 define([
-    'backbone',
-    'underscore'
-], function( _, Backbone ) {
+    'backbone'
+], function( Backbone ) {
 
     var Book = Backbone.Model.extend({  });
 

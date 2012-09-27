@@ -1,6 +1,6 @@
 define([
-    'underscore', 'backbone', 'collections/library'
-], function( _, Backbone, LibraryCollection ) {
+    'jquery', 'collections/library', 'models/fine'
+], function( $, LibraryCollection, Fine ) {
 
     var FinesCollection = LibraryCollection.extend({
         model: Fine,

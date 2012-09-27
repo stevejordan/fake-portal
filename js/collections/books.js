@@ -1,6 +1,6 @@
 define([
-    'underscore', 'backbone', 'collections/library'
-], function( _, Backbone, LibraryCollection ) {
+    'jquery', 'collections/library', 'models/book'
+], function( $, LibraryCollection, Book ) {
 
     var BooksCollection = LibraryCollection.extend({
         model: Book,

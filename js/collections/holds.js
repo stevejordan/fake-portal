@@ -1,6 +1,6 @@
 define([
-    'underscore', 'backbone', 'collections/library'
-], function( _, Backbone, LibraryCollection ) {
+    'jquery', 'collections/library', 'models/hold'
+], function(_$, LibraryCollection, Hold ) {
 
     var HoldsCollection = LibraryCollection.extend({
         model: Hold,
