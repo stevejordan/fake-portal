@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Documentation for the client side "portal" page"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-09-21 11:48:43 BST"/>
+<meta name="generated" content="2012-09-28 16:30:38 BST"/>
 <meta name="author" content="Steve Jordan"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -134,7 +134,12 @@
 </ul></li>
 </ul>
 </li>
-<li><a href="#sec-3">3 Data sources</a></li>
+<li><a href="#sec-3">3 Data sources</a>
+<ul>
+<li><a href="#sec-3-1">3.1 moodle</a></li>
+<li><a href="#sec-3-2">3.2 millenium</a></li>
+</ul>
+</li>
 <li><a href="#sec-4">4 Future data sources</a></li>
 </ul>
 </div>
@@ -185,7 +190,9 @@
 <h4 id="sec-2-1-1"><span class="section-number-4">2.1.1</span> Person</h4>
 <div class="outline-text-4" id="text-2-1-1">
 
-</div>
+<p>    currently unused, will eventually need to grab data from AD,
+    evision, moodle etc.
+</p></div>
 
 </div>
 
@@ -193,7 +200,8 @@
 <h4 id="sec-2-1-2"><span class="section-number-4">2.1.2</span> Course</h4>
 <div class="outline-text-4" id="text-2-1-2">
 
-</div>
+<p>    a course from moodle
+</p></div>
 
 </div>
 
@@ -201,7 +209,8 @@
 <h4 id="sec-2-1-3"><span class="section-number-4">2.1.3</span> Book</h4>
 <div class="outline-text-4" id="text-2-1-3">
 
-</div>
+<p>    a book currently on loan from a library
+</p></div>
 
 </div>
 
@@ -209,7 +218,8 @@
 <h4 id="sec-2-1-4"><span class="section-number-4">2.1.4</span> Hold</h4>
 <div class="outline-text-4" id="text-2-1-4">
 
-</div>
+<p>    a book hold requested from a library
+</p></div>
 
 </div>
 
@@ -217,7 +227,8 @@
 <h4 id="sec-2-1-5"><span class="section-number-4">2.1.5</span> Fine</h4>
 <div class="outline-text-4" id="text-2-1-5">
 
-</div>
+<p>    a library fine, historical or due
+</p></div>
 
 </div>
 
@@ -225,7 +236,8 @@
 <h4 id="sec-2-1-6"><span class="section-number-4">2.1.6</span> CalendarItem</h4>
 <div class="outline-text-4" id="text-2-1-6">
 
-
+<p>    a (moodle currently) calendar entry
+</p>
 </div>
 </div>
 
@@ -235,7 +247,8 @@
 <h3 id="sec-2-2"><span class="section-number-3">2.2</span> collections</h3>
 <div class="outline-text-3" id="text-2-2">
 
-
+<p>   all groupings of instances of the above models
+</p>
 </div>
 
 <div id="outline-container-2-2-1" class="outline-4">
@@ -369,6 +382,36 @@
 <h2 id="sec-3"><span class="section-number-2">3</span> Data sources</h2>
 <div class="outline-text-2" id="text-3">
 
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> moodle</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<p>   based on work done by Amanda using moodle2 api
+</p>
+<p>
+   Amanda's code is in msm2an0:/web/docs/webapps/moodle/portal
+   amends/overloads in msm2an0:/web/docs/webapps/matrix/services/portal-poc/index.php
+   These should be merged into better structured php
+</p>
+<p>
+   url Matrix hits is webapps.test.city.ac.uk/matrix/portal-poc/index.php
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> millenium</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<p>   using UQL<sub>Millenium</sub> classes to structure the liasing with millenuim api
+   work done in msm2an0:/web/docs/webapps/matrix/services/portal-poc/millenium-uql.php
+</p>
+</div>
 </div>
 
 </div>
@@ -377,12 +420,14 @@
 <h2 id="sec-4"><span class="section-number-2">4</span> Future data sources</h2>
 <div class="outline-text-2" id="text-4">
 
+
+
 </div>
 </div>
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2012-09-21 11:48:43 BST</p>
+<p class="date">Date: 2012-09-28 16:30:38 BST</p>
 <p class="author">Author: Steve Jordan</p>
 <p class="creator">Org version 7.8.06 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
