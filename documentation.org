@@ -52,7 +52,6 @@ Documentation for the client side "portal" page
 *** FineView
 *** CalendarView
 
-
 * Data sources
 
 ** moodle
