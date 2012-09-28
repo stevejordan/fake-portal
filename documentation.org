@@ -10,13 +10,13 @@ Documentation for the client side "portal" page
   proxying in future), which makes a request to a php resource on
   webapps.city, which is responsible for getting and caching the
   source data.
-                               
+
 * Codebase
   The frontend is done using [[http://backbonejs.org/][backbone.js]], which is an MV*
   framework. It organises the code into models, collections and
   views. The view is where the majority of the work is done. So far we
   have the following models, collections and views:
-** models  
+** models
 *** Person
     currently unused, will eventually need to grab data from AD,
     evision, moodle etc.
@@ -68,4 +68,4 @@ Documentation for the client side "portal" page
    work done in msm2an0:/web/docs/webapps/matrix/services/portal-poc/millenium-uql.php
 
 * Future data sources
- 
+
