@@ -7,3 +7,9 @@
 [submodule "vendor/foundation"]
 	path = vendor/foundation
 	url = git://github.com/zurb/foundation.git
+[submodule "vendor/requirejs"]
+	path = vendor/requirejs
+	url = git://github.com/jrburke/requirejs.git
+[submodule "vendor/r.js"]
+	path = vendor/r.js
+	url = git://github.com/jrburke/r.js.git

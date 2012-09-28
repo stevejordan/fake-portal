@@ -1,12 +1,5 @@
-/*jslint
- evil: true, browser: true, nomen: true, plusplus: true
-*/
-
-/*global
- jQuery, $, Backbone, _
-*/
-
-require.config({
+({
+    baseUrl: ".",
     shim: {
         'underscore': {
             exports: '_'
@@ -23,14 +16,7 @@ require.config({
         jquery: 'lib/jquery.min',
         underscore: 'lib/underscore-min',
         backbone: 'lib/backbone-min',
-    }
-});
-
-require([
-    'views/fakeportal'
-], function ( FakePortal ) {
-
-    // this is the main view that kicks it all off
-    new FakePortal();
-
-});
+    },
+    name: 'fakeportal',
+    out: '../../fp.build.js'
+})
