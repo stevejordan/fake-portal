@@ -32,6 +32,7 @@ Documentation for the client side "portal" page
     a (moodle currently) calendar entry
 
 ** collections
+   all groupings of instances of the above models
 *** CoursesCollection
 *** BooksCollection
 *** HoldsCollection
