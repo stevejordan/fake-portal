@@ -18,11 +18,18 @@ Documentation for the client side "portal" page
   have the following models, collections and views:
 ** models  
 *** Person
+    currently unused, will eventually need to grab data from AD,
+    evision, moodle etc.
 *** Course
-*** Book  
-*** Hold  
-*** Fine  
+    a course from moodle
+*** Book
+    a book currently on loan from a library
+*** Hold
+    a book hold requested from a library
+*** Fine
+    a library fine, historical or due
 *** CalendarItem
+    a (moodle currently) calendar entry
 
 ** collections
 *** CoursesCollection
