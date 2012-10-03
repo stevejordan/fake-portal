@@ -27,8 +27,8 @@ require.config({
 });
 
 require([
-    'views/fakeportal'
-], function ( FakePortal ) {
+    'views/fakeportal', 'namespace'
+], function ( FakePortal, ns ) {
 
     //global jquery ajax error handler
      $("#working").bind("ajaxSend", function(){
@@ -47,6 +47,8 @@ require([
      });
 
     // this is the main view that kicks it all off
-    new FakePortal();
+    var main = new FakePortal();
+
+    ns.FakePortal = main;
 
 });

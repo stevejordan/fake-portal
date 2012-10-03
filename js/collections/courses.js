@@ -1,6 +1,6 @@
 define([
-   'collections/abstract', 'views/fakeportal', 'models/course'
-], function( AbstractCollection, FakePortal, Course ) {
+   'collections/abstract', 'namespace', 'models/course'
+], function( AbstractCollection, ns, Course ) {
 
     var CoursesCollection = AbstractCollection.extend({
 
@@ -23,7 +23,7 @@ define([
 
             //render any messages
             if (response.messages) {
-                FakePortal.trigger('message', response.messages);
+                ns.FakePortal.trigger('message', response.messages);
             }
 
             return response.main.courses.other;

@@ -4,8 +4,9 @@ define([
     'models/calendarItem', 
     'views/fakeportal', 
     'views/calendar', 
-    'helpers'
-], function( $, AbstractCollection, CalendarItem, FakePortal, CalendarView, Helpers ) {
+    'helpers',
+    'namespace'
+], function( $, AbstractCollection, CalendarItem, FakePortal, CalendarView, Helpers, ns ) {
 
     var Calendar = AbstractCollection.extend({
 
@@ -26,7 +27,7 @@ define([
 
             //render any messages
             if (response.messages) {
-                FakePortal.trigger('message', response.messages);
+                ns.FakePortal.trigger('message', response.messages);
             }
 
             return parsed;
