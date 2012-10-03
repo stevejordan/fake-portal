@@ -4,7 +4,7 @@ define([
            
     var CalendarView = Backbone.View.extend({
 
-        tagName: 'li',
+        tagName: 'span', //don't want any element here, but I don't think you can have that?
 
         template: _.template($('#calendar-template').html()),
 

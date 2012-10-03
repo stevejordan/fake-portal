@@ -45,135 +45,229 @@
   </head>
   <body>
 
-    <div class="row">
-      <div class="twelve columns">
-	<h1>Fake Portal</h1>
-	<hr />
+    <div id="content">
+
+      <div class="row">
+        <div class="twelve columns">
+	  <h1>Student Portal Beta</h1>
+	  <hr />
+        </div>
       </div>
-    </div>
+      
+      <div class="row">
 
-    <div class="row">
-      <div class="eight columns">
-	<h2>Services</h2>
+        <div class="twelve columns welcome">
+          Hi «Name» <span class="sub">«Welcome of the week...»</span>
+        </div>
 
-        <section class="row">
-          
-          <!-- library -->
-          <section id="library" class="six columns">
-            <h3>Library</h3>
-            <div class="panel">
-              <p>Library info about current loans etc. appear here</p>
+        <div class="eight columns">
+
+          <div id="noticeboard" class="widget">
+            <h2>Noticeboard</h2>
+            <ol class="eight columns">
+              <li class="major">Homicidal maniac rampaging through College Building!</li>
+              <li class="warning">Coursework deadline missed.</li>
+              <li class="photos">Awesome photoshoot with/of/about the Vice-Chancellor.</li>
+              <li class="closure">Facility closed for repair, upgrade or something else.</li>
+              <li class="finance">Finance or fee type alert.</li>
+              <li class="event">A worthy event is happening.</li>
+              <li class="course-message">Exam or coursework result return message or alert.</li>
+              <li class="it-service-desk">IT Service desk announcement.</li>
+              <li class="twitter">Tweet from S4S (or similar).</li>
+              <li class="moodle">Moodle 2.0 virtual learning environment goes live!</li>
+              <li class="rss">CityNews for Students blog feed.</li>
+            </ol>
+            <section class="marketing-message four columns">
+              <ol>
+                <li>Message 1</li>
+                <li>Message 2</li>
+                <li>Message 3</li>
+              </ol>
+            </section>
+          </div>
+
+          <section class="six columns">
+
+            <div id="email" class="widget">
+              <div class="header">
+                <h3>Email 365</h3>
+                <a href="#">Inbox</a> | <a href="#">Personal Calendar</a>
+              </div>
+              <ol>
+                <li>Email 1</li>
+                <li>Email 2</li>
+                <li>Email 3</li>
+                <li>Email 4</li>
+                <li>Email 5</li>
+                <li>Email 6</li>
+                <li>...</li>
+              </ol>
             </div>
-          </section>
-          <!-- moodle -->
-          <section id="moodle" class="six columns">
-            <h3>Moodle</h3>
-            <div class="panel">
-              <p>Moodle info to appear here</p>
+            
+            <div id="assignments" class="widget">
+              <h3>Assignments, Exams</h3>
+              <h4>Assignments</h4>
+              <dl>
+                <dt>Practices and Theories in Interaction Design</dt>
+                <dd>Due: Thursday 10 May, 4.05pm</dd>
+                <dd><a href="#">1 submission <em>not</em> graded.</a></dd>
+              </dl>
+              <h4>Exams</h4>
+              <dl>
+                <dt>Exam 1</dt>
+                <dd>Thursday 10 May, 4.05pm</dd>
+              </dl>
+              <a href="#">January Exam Timetable</a> | <a href="#">Exam Regulations</a>
             </div>
+
           </section>
 
-        </section>
+          <section class="six columns">
 
-	<h3>Tabs</h3>
-	<dl class="tabs">
-	  <dd class="active"><a href="#simple1">Simple Tab 1</a></dd>
-	  <dd><a href="#simple2">Simple Tab 2</a></dd>
-	  <dd><a href="#simple3">Simple Tab 3</a></dd>
-	</dl>
+            <div id="calendar" class="widget">
+              <h3>Moodle Calendar</h3>
+              <div class="month-calendar">
+              </div>
+              <dl>
+                <dt>time of event</dt>
+                <dd>Event of note</dd>
+                <dt>time of event</dt>
+                <dd>Event of note</dd>
+                <dt>time of event</dt>
+                <dd>Event of note</dd>
+              </dl>
+            </div>
 
-	<ul class="tabs-content">
-	  <li class="active" id="simple1Tab">This is simple tab 1's content. Pretty neat, huh?</li>
-	  <li id="simple2Tab">This is simple tab 2's content. Now you see it!</li>
-	  <li id="simple3Tab">This is simple tab 3's content. It's, you know...okay.</li>
-	</ul>
+            <div id="modules" class="widget">
+              <h3>Modules</h3>
+              <dl>
+                <dt>INM401 <a href="#">Information Architecture</a></dt>
+                <dd class="discussion-board">
+                  <dl>
+                    <dt><a href="#">Best practice in educational video</a></dt>
+                    <dd>11 posts since last login</dd>
+                    <dt><a href="#">Even better practice in educational video</a></dt>
+                    <dd>11 posts since last login</dd>
+                    <dt><a href="#">Even more betterer practice in educational video</a></dt>
+                    <dd>0 posts since last login</dd>
+                  </dl>
+                </dd>
+                <dt>INM401 <a href="#">Inclusive Design</a></dt>
+                <dt>INM401 <a href="#">Introduction to HCI</a></dt>
+                <dd class="discussion-board">
+                  <dl>
+                    <dt><a href="#">Best practice in educational video</a></dt>
+                    <dd>11 posts since last login</dd>
+                  </dl>
+                </dd>
+              </dl>
+            </div>
 
+          </section>
+
+        </div>
+
+        <div class="four columns">
+	  <h4>About you</h4>
+          <section id="about">
+	    <p>Info about you to appear here</p>
+          </section>
+	  <h3>Libary</h3>
+	  <dl class="tabs">
+	    <dd class="active"><a href="#simple1">Loans</a></dd>
+	    <dd><a href="#simple2">Fines</a></dd>
+	    <dd><a href="#simple3">Holds</a></dd>
+	  </dl>
+
+	  <ul class="tabs-content">
+	    <li class="active" id="simple1Tab">
+              <ol id="books"></ol>
+            </li>
+	    <li id="simple2Tab">This is simple tab 2's content. Now you see it!</li>
+	    <li id="simple3Tab">This is simple tab 3's content. It's, you know...okay.</li>
+	  </ul>
+        </div>
 
       </div>
-      <div class="four columns">
-	<h4>About you</h4>
-        <section id="about">
-	  <p>Info about you to appear here</p>
-        </section>
-      </div>
+
+      <!-- templates follow (should these be in files for require?)-->
+      <script type="text/template" id="course-template">
+        <a href="#" title="link to moodle?"><%= fullname %></a>
+      </script>
+
+      <script type="text/template" id="course-table-template">
+        <td><%= id %></td>
+        <td><%= shortname %></td>
+        <td><%= fullname %></td>
+        <td><%= enrolledusercount %></td>
+        <td><%= visible %></td>
+        <td><%= showgrades %></td>
+      </script>
+
+      <script type="text/template" id="calendar-template">
+        <dt class="dtstart"><%= start_date %> <%= start_time %></dt>
+        <dd class="summary"><%= SUMMARY %></dd>
+      </script>
+
+      <script type="text/template" id="calendar-table-template">
+        <td><%= SUMMARY %></td>
+        <td><%= DESCRIPTION %></td>
+        <td><%= start_date %></td>
+        <td><%= start_time %></td>
+      </script>
+
+      <script type="text/template" id="book-template">
+        <a href="<%= predictableURL %>"><%= title %></a> (<%= callNumber %>)<br />
+        since: <% print(FP.Helpers.atomDateParser(dateCheckedOut)); %>, 
+        due on: <% print(FP.Helpers.atomDateParser(dueDate)); %>
+      </script>
+
+      <script type="text/template" id="book-table-template">
+        <td><%= title %></td>
+        <td><%= dueDate %></td>
+        <td><%= callNumber %></td>
+        <td><%= predictableURL %></td>
+        <td><%= dateCheckedOut %></td>
+      </script>
+
+      <script type="text/template" id="fine-template">
+        <% print(FP.Helpers.atomDateParser(datePaid)); %>, paid £<%= amountPaid %> for 
+        <a href="<%= predictableURL %>"><%= itemTitle %></a> (<%= chargeType %>)<br />
+        <%= description %>    
+      </script>
+
+      <script type="text/template" id="fine-table-template">
+        <td><%= amountPaid %></td>
+        <td><%= chargeType %></td>
+        <td><% print(FP.Helpers.atomDateParser(datePaid)); %></td>
+        <td><%= description %></td>
+        <td><% print(FP.Helpers.atomDateParser(itemCheckoutDate)); %></td>
+        <td><% print(FP.Helpers.atomDateParser(itemDateReturned)); %></td>
+        <td><% print(FP.Helpers.atomDateParser(itemDueDate)); %></td>
+        <td><%= itemLoanRule %></td>
+        <td><%= itemRecordNum %></td>
+        <td><a href="<%= predictableURL %>"><%= itemTitle %></a></td>
+      </script>
+
+      <script type="text/template" id="hold-template">
+        <% print(FP.Helpers.atomDateParser(timeHoldPlaced)); %> 
+        <a href="<%= predictableURL %>"><%= title %></a> requested between 
+        <% print(FP.Helpers.atomDateParser(notWantedBefore)); %> - 
+        <% print(FP.Helpers.atomDateParser(notWantedAfter)); %> from 
+        <%= pickupLocationMeaning %>
+      </script>
+
+      <script type="text/template" id="hold-table-template">
+        <td><% print(FP.Helpers.atomDateParser(notWantedAfter)); %></td>
+        <td><% print(FP.Helpers.atomDateParser(notWantedBefore)); %></td>
+        <td><%= pickupLocationMeaning %></td>
+        <td><% print(FP.Helpers.atomDateParser(timeHoldPlaced)); %></td>
+        <td><a href="<%= predictableURL %>"><%= title %></a></td>
+      </script>
+
+      <div id="working">Working...</div>
+      <div id="error"></div>
+
     </div>
-
-    <!-- templates follow (should these be in files for require?)-->
-    <script type="text/template" id="course-template">
-      <a href="#" title="link to moodle?"><%= fullname %></a>
-    </script>
-
-    <script type="text/template" id="course-table-template">
-      <td><%= id %></td>
-      <td><%= shortname %></td>
-      <td><%= fullname %></td>
-      <td><%= enrolledusercount %></td>
-      <td><%= visible %></td>
-      <td><%= showgrades %></td>
-    </script>
-
-    <script type="text/template" id="calendar-template">
-      <span class="dtstart"><%= start_date %></span> <%= start_time %> <span class="summary"><%= SUMMARY %></span>
-    </script>
-
-    <script type="text/template" id="calendar-table-template">
-      <td><%= SUMMARY %></td>
-      <td><%= DESCRIPTION %></td>
-      <td><%= start_date %></td>
-      <td><%= start_time %></td>
-    </script>
-
-    <script type="text/template" id="book-template">
-      <a href="<%= predictableURL %>"><%= title %></a> (<%= callNumber %>)<br />
-      since: <% print(FP.Helpers.atomDateParser(dateCheckedOut)); %>, 
-      due on: <% print(FP.Helpers.atomDateParser(dueDate)); %>
-    </script>
-
-    <script type="text/template" id="book-table-template">
-      <td><%= title %></td>
-      <td><%= dueDate %></td>
-      <td><%= callNumber %></td>
-      <td><%= predictableURL %></td>
-      <td><%= dateCheckedOut %></td>
-    </script>
-
-    <script type="text/template" id="fine-template">
-      <% print(FP.Helpers.atomDateParser(datePaid)); %>, paid £<%= amountPaid %> for 
-      <a href="<%= predictableURL %>"><%= itemTitle %></a> (<%= chargeType %>)<br />
-      <%= description %>    
-    </script>
-
-    <script type="text/template" id="fine-table-template">
-      <td><%= amountPaid %></td>
-      <td><%= chargeType %></td>
-      <td><% print(FP.Helpers.atomDateParser(datePaid)); %></td>
-      <td><%= description %></td>
-      <td><% print(FP.Helpers.atomDateParser(itemCheckoutDate)); %></td>
-      <td><% print(FP.Helpers.atomDateParser(itemDateReturned)); %></td>
-      <td><% print(FP.Helpers.atomDateParser(itemDueDate)); %></td>
-      <td><%= itemLoanRule %></td>
-      <td><%= itemRecordNum %></td>
-      <td><a href="<%= predictableURL %>"><%= itemTitle %></a></td>
-    </script>
-
-    <script type="text/template" id="hold-template">
-      <% print(FP.Helpers.atomDateParser(timeHoldPlaced)); %> 
-      <a href="<%= predictableURL %>"><%= title %></a> requested between 
-      <% print(FP.Helpers.atomDateParser(notWantedBefore)); %> - 
-      <% print(FP.Helpers.atomDateParser(notWantedAfter)); %> from 
-      <%= pickupLocationMeaning %>
-    </script>
-
-    <script type="text/template" id="hold-table-template">
-      <td><% print(FP.Helpers.atomDateParser(notWantedAfter)); %></td>
-      <td><% print(FP.Helpers.atomDateParser(notWantedBefore)); %></td>
-      <td><%= pickupLocationMeaning %></td>
-      <td><% print(FP.Helpers.atomDateParser(timeHoldPlaced)); %></td>
-      <td><a href="<%= predictableURL %>"><%= title %></a></td>
-    </script>
-
-    <div id="working">Working...</div>
-    <div id="error"></div>
-
   </body>
 </html>

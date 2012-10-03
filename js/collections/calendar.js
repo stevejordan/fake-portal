@@ -15,7 +15,7 @@ define([
 
         model: CalendarItem,
         view: 'CalendarView',
-        $el: $('#calendar'),
+        $el: $('#calendar dl'),
         parse: function (response) {
 
             var parsed;
