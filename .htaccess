@@ -1,10 +1,13 @@
 # .htaccess for local dev
 
-# prevent browser cache for all assets while on localhost
 SetEnvIf Host localhost we_are_local
-Header set Cache-Control no-cache env=we_are_local
-Header set Pragma no-cache env=we_are_local
-Header set Expires 0 env=we_are_local
-Header unset ETag env=we_are_local
 
-Header set X-Dev-Environment true env=we_are_local
+# prevent browser cache for all assets while on localhost
+<IfModule mod_headers.c>
+    Header set Cache-Control no-cache env=we_are_local
+    Header set Pragma no-cache env=we_are_local
+    Header set Expires 0 env=we_are_local
+    Header unset ETag env=we_are_local
+
+    Header set X-Dev-Environment true env=we_are_local
+</IfModule>
