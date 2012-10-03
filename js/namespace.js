@@ -6,6 +6,8 @@ define([], function () {
     //debug flag
     FP.debugging = location.search.match('debug') ? true : false;
 
+    window.FP = FP;
+
     return FP;
 
 });

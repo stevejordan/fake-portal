@@ -16,6 +16,8 @@ define([
         //spelling !
         initialize: function () {
 
+            var ajaxOpts = {};
+
             Helpers.debug('kick off!');
 
             //hook up some events
@@ -41,14 +43,24 @@ define([
             ns.holds = new HoldsCollection();
             ns.calendar = new Calendar();
 
+            //while on localhost, we make CORS requests and need
+            //withCredentials to be set
+            if (document.location.host === 'localhost') {
+                ajaxOpts = {
+                    xhrFields: {
+                        withCredentials: true
+                    }
+                };
+            }
+
             //load up the data
-            ns.courses.fetch();
-            ns.books.fetch();
-            ns.fines.fetch();
-            ns.holds.fetch();
+            ns.courses.fetch(ajaxOpts);
+            ns.books.fetch(ajaxOpts);
+            ns.fines.fetch(ajaxOpts);
+            ns.holds.fetch(ajaxOpts);
 
             //pull in calendar
-            ns.calendar.fetch();
+            ns.calendar.fetch(ajaxOpts);
 
         },
 

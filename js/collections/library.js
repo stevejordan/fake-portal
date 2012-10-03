@@ -1,18 +1,18 @@
 define([
-    'collections/abstract', 'namespace'
-], function( AbstractCollection, ns ) {
+    'collections/abstract', 'namespace', 'helpers'
+], function( AbstractCollection, ns, Helpers ) {
 
     var LibraryCollection = AbstractCollection.extend({
 
-        url: function () {
-            return '/portal-poc/remote-services/millenium-api?request=' + this.requestString;
+        urlfragment: function () {
+            return 'remote-services/millenium-api?request=' + this.requestString;
         },
 
         parse: function (response) {
 
             //error checking
             if (!response.main || response.main.status !== 'success') {
-                ns.Helpers.debug('error: ' + (response.main.message || 'unknown problem'));
+                Helpers.debug('error: ' + (response.main.message || 'unknown problem'));
                 return {};
             }
 

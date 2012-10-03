@@ -1,6 +1,6 @@
 define([
-    'jquery', 'underscore', 'backbone', 'namespace'
-], function ( $, _, Backbone, ns) {
+    'jquery', 'underscore', 'backbone', 'namespace', 'helpers'
+], function ( $, _, Backbone, ns, Helpers) {
            
     var CalendarView = Backbone.View.extend({
 
@@ -29,20 +29,22 @@ define([
             start_time: "15:30"
              */
 
-            ns.Helpers.debug('rendering a calendar item...');
+            Helpers.debug('rendering a calendar item...');
 
             this
                 .$el.html(this.template(this.model.toJSON()))
                 .appendTo(ns.calendar.$el);
 
             //if debug also append to table
-            ns.Helpers.showTableView('calendar', this.model);
+            Helpers.showTableView('calendar', this.model);
 
             return this;
 
         }
 
     });
+
+    ns.CalendarView = CalendarView;
 
     return CalendarView;
 

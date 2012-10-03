@@ -1,6 +1,6 @@
 define([
-    'jquery', 'collections/library', 'models/book'
-], function( $, LibraryCollection, Book ) {
+    'jquery', 'collections/library', 'models/book', 'views/book'
+], function( $, LibraryCollection, Book, BookView ) {
 
     var BooksCollection = LibraryCollection.extend({
         model: Book,

@@ -1,7 +1,7 @@
 define([
-    'jquery', 'underscore', 'backbone', 'namespace'
-], function ( $, _, Backbone, ns) {
-           
+    'jquery', 'underscore', 'backbone', 'namespace', 'helpers'
+], function ( $, _, Backbone, ns, Helpers) {
+
     var CourseView = Backbone.View.extend({
 
         tagName: 'li',
@@ -14,20 +14,23 @@ define([
 
         render: function () {
 
-            ns.Helpers.debug('rendering a course...');
-            //ns.Helpers.debug(this.model.toJSON());
+            Helpers.debug('rendering a course...');
+            //Helpers.debug(this.model.toJSON());
 
             this.$el
                 .html(this.template(this.model.toJSON()))
                 .appendTo(ns.courses.$el);
 
             //if debug also append to table
-            ns.Helpers.showTableView('course', this.model);
+            Helpers.showTableView('course', this.model);
 
             return this;
         }
 
     });
+
+    //also store in namaspace
+    ns.CourseView = CourseView;
 
     return CourseView;
 

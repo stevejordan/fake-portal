@@ -1,11 +1,16 @@
 define([
-    'jquery', 'collections/abstract', 'models/calendarItem', 'views/fakeportal', 'helpers'
-], function( $, AbstractCollection, CalendarItem, FakePortal, Helpers ) {
-
+    'jquery', 
+    'collections/abstract', 
+    'models/calendarItem', 
+    'views/fakeportal', 
+    'views/calendar', 
+    'helpers'
+], function( $, AbstractCollection, CalendarItem, FakePortal, CalendarView, Helpers ) {
+debugger;
     var Calendar = AbstractCollection.extend({
 
         //where to find the calendar
-        url: '/portal-poc/remote-services/moodle-api?request=calendar',
+        urlfragment: 'remote-services/moodle-api?request=calendar',
 
         model: CalendarItem,
         view: 'CalendarView',
@@ -14,10 +19,10 @@ define([
 
             var parsed;
 
-            //ns.Helpers.debug('response from calendar query');
+            //Helpers.debug('response from calendar query');
 
             parsed = Helpers.parseIcal(response.main.calendar.ical);
-            //ns.Helpers.debug(parsed);
+            //Helpers.debug(parsed);
 
             //render any messages
             if (response.messages) {

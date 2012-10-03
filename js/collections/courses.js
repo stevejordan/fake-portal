@@ -11,7 +11,7 @@ define([
         view: 'CourseView',
 
         //where to find the courses
-        url: '/portal-poc/remote-services/moodle-api?request=courses',
+        urlfragment: 'remote-services/moodle-api?request=courses',
 
         //where to put the model elements
         $el: $('#courses'),

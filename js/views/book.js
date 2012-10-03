@@ -1,6 +1,6 @@
 define([
-    'jquery', 'underscore', 'backbone', 'namespace'
-], function ( $, _, Backbone, ns) {
+    'jquery', 'underscore', 'backbone', 'namespace', 'helpers'
+], function ( $, _, Backbone, ns, Helpers) {
            
     var BookView = Backbone.View.extend({
 
@@ -14,20 +14,23 @@ define([
 
         render: function () {
 
-            ns.Helpers.debug('rendering a book...');
-            //ns.Helpers.debug(this.model.toJSON());
+            Helpers.debug('rendering a book...');
+            //Helpers.debug(this.model.toJSON());
 
             this.$el
                 .html(this.template(this.model.toJSON()))
                 .appendTo(ns.books.$el);
 
             //if debug also append to table
-            ns.Helpers.showTableView('book', this.model);
+            Helpers.showTableView('book', this.model);
 
             return this;
 
         }
     });
+
+    //also store in namespace
+    ns.BookView = BookView;
 
     return BookView;
 

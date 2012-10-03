@@ -160,6 +160,8 @@ define([
 
     };
 
+    ns.Helpers = Helpers; 
+
     return Helpers;
 
 });

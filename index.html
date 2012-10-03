@@ -21,9 +21,9 @@
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- main bootstrap file
-    <script data-main="js/fakeportal.js" src="vendor/requirejs/require.js"></script> -->
-    <script data-main="../fp.build.js" src="vendor/requirejs/require.js"></script>
+    <!-- main bootstrap file     -->
+    <script data-main="js/fakeportal.js" src="vendor/requirejs/require.js"></script>
+<!--    <script data-main="../fp.build.js" src="vendor/requirejs/require.js"></script> -->
 
   </head>
   <body>
@@ -80,6 +80,80 @@
         </section>
       </div>
     </div>
+
+<!-- templates follow (should these be in files for require?)-->
+<script type="text/template" id="course-template">
+  <a href="#" title="link to moodle?"><%= fullname %></a>
+</script>
+
+<script type="text/template" id="course-table-template">
+  <td><%= id %></td>
+  <td><%= shortname %></td>
+  <td><%= fullname %></td>
+  <td><%= enrolledusercount %></td>
+  <td><%= visible %></td>
+  <td><%= showgrades %></td>
+</script>
+
+<script type="text/template" id="calendar-template">
+  <span class="dtstart"><%= start_date %></span> <%= start_time %> <span class="summary"><%= SUMMARY %></span>
+</script>
+
+<script type="text/template" id="calendar-table-template">
+  <td><%= SUMMARY %></td>
+  <td><%= DESCRIPTION %></td>
+  <td><%= start_date %></td>
+  <td><%= start_time %></td>
+</script>
+
+<script type="text/template" id="book-template">
+  <a href="<%= predictableURL %>"><%= title %></a> (<%= callNumber %>)<br />
+    since: <% print(FP.Helpers.atomDateParser(dateCheckedOut)); %>, 
+      due on: <% print(FP.Helpers.atomDateParser(dueDate)); %>
+</script>
+
+<script type="text/template" id="book-table-template">
+  <td><%= title %></td>
+  <td><%= dueDate %></td>
+  <td><%= callNumber %></td>
+  <td><%= predictableURL %></td>
+  <td><%= dateCheckedOut %></td>
+</script>
+
+<script type="text/template" id="fine-template">
+  <% print(FP.Helpers.atomDateParser(datePaid)); %>, paid £<%= amountPaid %> for 
+    <a href="<%= predictableURL %>"><%= itemTitle %></a> (<%= chargeType %>)<br />
+      <%= description %>    
+</script>
+
+<script type="text/template" id="fine-table-template">
+  <td><%= amountPaid %></td>
+  <td><%= chargeType %></td>
+  <td><% print(FP.Helpers.atomDateParser(datePaid)); %></td>
+  <td><%= description %></td>
+  <td><% print(FP.Helpers.atomDateParser(itemCheckoutDate)); %></td>
+  <td><% print(FP.Helpers.atomDateParser(itemDateReturned)); %></td>
+  <td><% print(FP.Helpers.atomDateParser(itemDueDate)); %></td>
+  <td><%= itemLoanRule %></td>
+  <td><%= itemRecordNum %></td>
+  <td><a href="<%= predictableURL %>"><%= itemTitle %></a></td>
+</script>
+
+<script type="text/template" id="hold-template">
+  <% print(FP.Helpers.atomDateParser(timeHoldPlaced)); %> 
+    <a href="<%= predictableURL %>"><%= title %></a> requested between 
+      <% print(FP.Helpers.atomDateParser(notWantedBefore)); %> - 
+        <% print(FP.Helpers.atomDateParser(notWantedAfter)); %> from 
+          <%= pickupLocationMeaning %>
+</script>
+
+<script type="text/template" id="hold-table-template">
+  <td><% print(FP.Helpers.atomDateParser(notWantedAfter)); %></td>
+  <td><% print(FP.Helpers.atomDateParser(notWantedBefore)); %></td>
+  <td><%= pickupLocationMeaning %></td>
+  <td><% print(FP.Helpers.atomDateParser(timeHoldPlaced)); %></td>
+  <td><a href="<%= predictableURL %>"><%= title %></a></td>
+</script>
 
   </body>
 </html>

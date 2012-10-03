@@ -1,6 +1,6 @@
 define([
-    'jquery', 'collections/library', 'models/fine'
-], function( $, LibraryCollection, Fine ) {
+    'jquery', 'collections/library', 'models/fine', 'views/fine'
+], function( $, LibraryCollection, Fine, FineView ) {
 
     var FinesCollection = LibraryCollection.extend({
         model: Fine,

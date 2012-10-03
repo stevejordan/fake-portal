@@ -1,6 +1,6 @@
 define([
-    'underscore', 'backbone', 'namespace'
-], function ( _, Backbone, ns) {
+    'underscore', 'backbone', 'namespace', 'helpers'
+], function ( _, Backbone, ns, Helpers) {
            
     var PersonView = Backbone.View.extend({
 
@@ -16,15 +16,17 @@ define([
         },
 
         render: function() {
-            ns.Helpers.debug(this.$e);
+            Helpers.debug(this.$e);
             this.$e.html(_.template('<h1 class="face"><%= name %></h1>', this.model.toJSON()));
         },
 
         openface: function() {
-            ns.Helpers.debug('click on face!');
+            Helpers.debug('click on face!');
         }
 
     });
+
+    ns.PersonView = PersonView;
 
     return PersonView;
 
