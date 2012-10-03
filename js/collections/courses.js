@@ -1,6 +1,6 @@
 define([
-   'collections/abstract', 'namespace', 'models/course'
-], function( AbstractCollection, ns, Course ) {
+   'collections/abstract', 'namespace', 'models/course', 'views/course'
+], function( AbstractCollection, ns, Course, CourseView ) {
 
     var CoursesCollection = AbstractCollection.extend({
 
@@ -20,6 +20,11 @@ define([
         parse: function (response) {
 
             //error checking here?
+
+            if (!response.main.courses) {
+                //there are no courses to render
+                return [];
+            }
 
             //render any messages
             if (response.messages) {

@@ -29,7 +29,7 @@ define([
 
     });
 
-    //also store in namaspace
+    //also store in namespace
     ns.CourseView = CourseView;
 
     return CourseView;
