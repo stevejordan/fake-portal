@@ -6,7 +6,7 @@ define([
     'views/calendar', 
     'helpers'
 ], function( $, AbstractCollection, CalendarItem, FakePortal, CalendarView, Helpers ) {
-debugger;
+
     var Calendar = AbstractCollection.extend({
 
         //where to find the calendar

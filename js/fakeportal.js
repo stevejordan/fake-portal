@@ -30,6 +30,22 @@ require([
     'views/fakeportal'
 ], function ( FakePortal ) {
 
+    //global jquery ajax error handler
+     $("#working").bind("ajaxSend", function(){
+         $(this).show();
+     }).bind("ajaxComplete", function(){
+         $(this).hide();
+     });
+
+     $("#error").bind("ajaxError", function(e, error){
+         $(this)
+             .html('problem with ajax request for : ' + error.status + ' ' + error.statusText +
+                  (error.status === 403 ? '<br/>need to sign into <a href="https://www.dev.city.ac.uk/portal-poc/remote-services" target="new">www.dev</a>?' : ''))
+             .show()
+             .click(function () {$(this).hide();});
+         
+     });
+
     // this is the main view that kicks it all off
     new FakePortal();
 
