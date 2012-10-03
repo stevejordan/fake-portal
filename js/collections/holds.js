@@ -1,6 +1,6 @@
 define([
-    'jquery', 'collections/library', 'models/hold'
-], function(_$, LibraryCollection, Hold ) {
+    'jquery', 'collections/library', 'models/hold', 'views/hold'
+], function(_$, LibraryCollection, Hold, HoldView ) {
 
     var HoldsCollection = LibraryCollection.extend({
         model: Hold,
