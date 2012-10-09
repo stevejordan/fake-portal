@@ -17,17 +17,25 @@ require.config({
                 'jquery'
             ],
             exports: 'Backbone'
+        },
+        'foundation': {
+            deps: [ 
+                'jquery', 
+                'vendor/foundation/modernizr.foundation',
+                'vendor/foundation/jquery.placeholder'
+            ]
         }
     },
     paths: {
         jquery: 'lib/jquery.min',
         underscore: 'lib/underscore-min',
         backbone: 'lib/backbone-min',
+        foundation: 'vendor/foundation/app',
     }
 });
 
 require([
-    'views/fakeportal', 'namespace'
+    'views/fakeportal', 'namespace', 'foundation'
 ], function ( FakePortal, ns ) {
 
     //global jquery ajax error handler
