@@ -120,6 +120,59 @@
               <a href="#">January Exam Timetable</a> | <a href="#">Exam Regulations</a>
             </div>
 
+            <div id="study-rooms" class="widget">
+              <h3>Bookable Study rooms</h3>
+
+              <dl class="tabs">
+                <dd>Study Rooms</dd>
+                <dd>Assistive Technology Rooms</dd>
+              </dl>
+              
+              <ul class="tabs-content">
+                <li>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Room</th>
+                        <th>Type</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>3A</td>
+                        <td></td>
+                        <td><a href="#">University Library</a></td>
+                        <td>Available</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li> 
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Room</th>
+                        <th>Type</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>3A</td>
+                        <td></td>
+                        <td><a href="#">University Library</a></td>
+                        <td>Available</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+              </ul>
+              
+            </div>
+
           </section>
 
           <section class="six columns">
@@ -163,30 +216,98 @@
               </dl>
             </div>
 
+            <div id="files" class="widget">
+              <div class="header">
+                <h3>Office 365 Files</h3>
+                <a href="#">All Files</a>
+              </div>
+              
+              <ul class="files-list">
+                <li class="folder">Coursework</li>
+                <li class="folder">Photos</li>
+                <li class="folder">Dissertation</li>
+                <li class="folder">Groupwork
+                  <ul>
+                    <li class="folder">Super Amazing Groupwork Assignment</li>
+                    <li class="word">Coursework coversheet v2.1 SoI</li>
+                    <li class="word">Essay</li>
+                    <li class="excel">Random Excel spreadsheet</li>
+                    <li class="pdf">Academic Paper from portal</li>
+                  </ul>
+                </li>
+                <li class="folder">Individual Assignments</li>
+              </ul>
+
+            </div>
+
           </section>
 
         </div>
 
-        <div class="four columns">
-	  <h4>About you</h4>
-          <section id="about">
-	    <p>Info about you to appear here</p>
-          </section>
-	  <h3>Libary</h3>
-	  <dl class="tabs">
-	    <dd class="active"><a href="#simple1">Loans</a></dd>
-	    <dd><a href="#simple2">Fines</a></dd>
-	    <dd><a href="#simple3">Holds</a></dd>
-	  </dl>
+        <section class="four columns">
 
-	  <ul class="tabs-content">
-	    <li class="active" id="simple1Tab">
-              <ol id="books"></ol>
-            </li>
-	    <li id="simple2Tab">This is simple tab 2's content. Now you see it!</li>
-	    <li id="simple3Tab">This is simple tab 3's content. It's, you know...okay.</li>
-	  </ul>
-        </div>
+          <div id="about" class="widget">
+	    <h3>Student Name</h3>
+            <img src="http://www.geekpress.fr/wp-content/uploads/users/wordpress_avatar.jpg?s=50" class="" alt="Picture of <student name>" />
+	    <dl>
+              <dd><a href="#">&lt;Course name&gt;</a></dd>
+              <dd><a href="#">&lt;Department&gt;</a></dd>
+            </dl>
+            <ul class="social-links">
+              <li class="twitter">twitter</li>
+              <li class="www">www</li>
+              <li class="flickr">flickr</li>
+              <li class="linkedin">linkedin</li>
+              <li class="facebook">facebook</li>
+              <li class="skype">skype</li>
+            </ul>
+          </div>
+
+          <div id="library" class="widget">
+	    <h3>Libary</h3>
+	    <dl class="tabs">
+	      <dd class="active"><a href="#lib-loans">Loans</a></dd>
+	      <dd><a href="#lib-holds">Holds</a></dd>
+	      <dd><a href="#lib-fines">Fines</a></dd>
+	    </dl>
+            
+	    <ul class="tabs-content">
+	      <li class="active" id="lib-loans">
+                <ol id="books"></ol>
+              </li>
+	      <li id="lib-holds">
+                <ol id="holds"></ol>
+              </li>
+	      <li id="lib-fines">
+                <ol id="fines"></ol>
+              </li>
+	    </ul>
+          </div>
+
+          <div id="computer-labs" class="widget">
+            <div class="header">
+              <h3>Computer Labs</h3>
+              <span>Updated at ...</span>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Room</th>
+                  <th>Busyness</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>room</td>
+                  <td>100% Busy</td>
+                  <td>20</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </section>
 
       </div>
 
@@ -269,5 +390,6 @@
       <div id="error"></div>
 
     </div>
+
   </body>
 </html>
