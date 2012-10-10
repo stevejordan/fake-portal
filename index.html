@@ -60,6 +60,10 @@
           Hi «Name» <span class="sub">«Welcome of the week...»</span>
         </div>
 
+      </div>
+
+      <div class="row">
+
         <div class="eight columns">
 
           <div id="noticeboard" class="widget">
@@ -90,8 +94,8 @@
 
             <div id="email" class="widget">
               <div class="header">
-                <h3>Email 365</h3>
-                <a href="#">Inbox</a> | <a href="#">Personal Calendar</a>
+                <h2>Email 365</h2>
+                <a href="#">Inbox</a> | <a href="#">Calendar</a>
               </div>
               <ol>
                 <li>Email 1</li>
@@ -105,14 +109,14 @@
             </div>
             
             <div id="assignments" class="widget">
-              <h3>Assignments, Exams</h3>
-              <h4>Assignments</h4>
+              <h2>Assignments, Exams</h2>
+              <h3>Assignments</h3>
               <dl>
                 <dt>Practices and Theories in Interaction Design</dt>
                 <dd>Due: Thursday 10 May, 4.05pm</dd>
                 <dd><a href="#">1 submission <em>not</em> graded.</a></dd>
               </dl>
-              <h4>Exams</h4>
+              <h3>Exams</h3>
               <dl>
                 <dt>Exam 1</dt>
                 <dd>Thursday 10 May, 4.05pm</dd>
@@ -121,15 +125,15 @@
             </div>
 
             <div id="study-rooms" class="widget">
-              <h3>Bookable Study rooms</h3>
+              <h2>Bookable Study rooms</h2>
 
               <dl class="tabs">
-                <dd>Study Rooms</dd>
-                <dd>Assistive Technology Rooms</dd>
+                <dd class="active"><a href="#bookable-study">Study Rooms</a></dd>
+                <dd><a href="#bookable-assistive">Assistive Technology Rooms</a></dd>
               </dl>
               
               <ul class="tabs-content">
-                <li>
+                <li id="#bookable-studyTab" class="active">
                   <table>
                     <thead>
                       <tr>
@@ -149,7 +153,7 @@
                     </tbody>
                   </table>
                 </li>
-                <li> 
+                <li id="#bookable-assistiveTab"> 
                   <table>
                     <thead>
                       <tr>
@@ -178,21 +182,21 @@
           <section class="six columns">
 
             <div id="calendar" class="widget">
-              <h3>Moodle Calendar</h3>
+              <h2>Moodle Calendar</h2>
               <div class="month-calendar">
               </div>
               <dl>
-                <dt>time of event</dt>
-                <dd>Event of note</dd>
-                <dt>time of event</dt>
-                <dd>Event of note</dd>
-                <dt>time of event</dt>
-                <dd>Event of note</dd>
+                <dt>10am</dt>
+                <dd><a href="#">Event of note</a></dd>
+                <dt>12pm</dt>
+                <dd><a href="#">Event of note</a></dd>
+                <dt>2.30pm</dt>
+                <dd><a href="#">Event of note</a></dd>
               </dl>
             </div>
 
             <div id="modules" class="widget">
-              <h3>Modules</h3>
+              <h2>Modules</h2>
               <dl>
                 <dt>INM401 <a href="#">Information Architecture</a></dt>
                 <dd class="discussion-board">
@@ -218,7 +222,7 @@
 
             <div id="files" class="widget">
               <div class="header">
-                <h3>Office 365 Files</h3>
+                <h2>Office 365 Files</h2>
                 <a href="#">All Files</a>
               </div>
               
@@ -247,7 +251,7 @@
         <section class="four columns">
 
           <div id="about" class="widget">
-	    <h3>Student Name</h3>
+	    <h2>Student Name</h2>
             <img src="http://www.geekpress.fr/wp-content/uploads/users/wordpress_avatar.jpg?s=50" class="" alt="Picture of <student name>" />
 	    <dl>
               <dd><a href="#">&lt;Course name&gt;</a></dd>
@@ -264,7 +268,8 @@
           </div>
 
           <div id="library" class="widget">
-	    <h3>Libary</h3>
+	    <h2>Libary</h2>
+
 	    <dl class="tabs">
 	      <dd class="active"><a href="#lib-loans">Loans</a></dd>
 	      <dd><a href="#lib-holds">Holds</a></dd>
@@ -272,13 +277,13 @@
 	    </dl>
             
 	    <ul class="tabs-content">
-	      <li class="active" id="lib-loans">
+	      <li class="active" id="lib-loansTab">
                 <ol id="books"></ol>
               </li>
-	      <li id="lib-holds">
+	      <li id="lib-holdsTab">
                 <ol id="holds"></ol>
               </li>
-	      <li id="lib-fines">
+	      <li id="lib-finesTab">
                 <ol id="fines"></ol>
               </li>
 	    </ul>
@@ -286,7 +291,7 @@
 
           <div id="computer-labs" class="widget">
             <div class="header">
-              <h3>Computer Labs</h3>
+              <h2>Computer Labs</h2>
               <span>Updated at ...</span>
             </div>
             <table>
