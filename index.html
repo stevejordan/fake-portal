@@ -68,26 +68,30 @@
 
           <div id="noticeboard" class="widget">
             <h2>Noticeboard</h2>
-            <ol class="eight columns">
-              <li class="major">Homicidal maniac rampaging through College Building!</li>
-              <li class="warning">Coursework deadline missed.</li>
-              <li class="photos">Awesome photoshoot with/of/about the Vice-Chancellor.</li>
-              <li class="closure">Facility closed for repair, upgrade or something else.</li>
-              <li class="finance">Finance or fee type alert.</li>
-              <li class="event">A worthy event is happening.</li>
-              <li class="course-message">Exam or coursework result return message or alert.</li>
-              <li class="it-service-desk">IT Service desk announcement.</li>
-              <li class="twitter">Tweet from S4S (or similar).</li>
-              <li class="moodle">Moodle 2.0 virtual learning environment goes live!</li>
-              <li class="rss">CityNews for Students blog feed.</li>
-            </ol>
-            <section class="marketing-message four columns">
-              <ol>
-                <li>Message 1</li>
-                <li>Message 2</li>
-                <li>Message 3</li>
+
+            <div class="widget-content">
+
+              <ol class="eight columns widget-content">
+                <li class="major">Homicidal maniac rampaging through College Building!</li>
+                <li class="warning">Coursework deadline missed.</li>
+                <li class="photos">Awesome photoshoot with/of/about the Vice-Chancellor.</li>
+                <li class="closure">Facility closed for repair, upgrade or something else.</li>
+                <li class="finance">Finance or fee type alert.</li>
+                <li class="event">A worthy event is happening.</li>
+                <li class="course-message">Exam or coursework result return message or alert.</li>
+                <li class="it-service-desk">IT Service desk announcement.</li>
+                <li class="twitter">Tweet from S4S (or similar).</li>
+                <li class="moodle">Moodle 2.0 virtual learning environment goes live!</li>
+                <li class="rss">CityNews for Students blog feed.</li>
               </ol>
-            </section>
+              <section class="marketing-message four columns">
+                <ol>
+                  <li>Message 1</li>
+                  <li>Message 2</li>
+                  <li>Message 3</li>
+                </ol>
+              </section>
+            </div>            
           </div>
 
           <section class="six columns">
@@ -97,7 +101,7 @@
                 <h2>Email 365</h2>
                 <a href="#">Inbox</a> | <a href="#">Calendar</a>
               </div>
-              <ol>
+              <ol class="widget-content">
                 <li>Email 1</li>
                 <li>Email 2</li>
                 <li>Email 3</li>
@@ -110,6 +114,7 @@
             
             <div id="assignments" class="widget">
               <h2>Assignments, Exams</h2>
+              <div class="widget-content">
               <h3>Assignments</h3>
               <dl>
                 <dt>Practices and Theories in Interaction Design</dt>
@@ -122,12 +127,15 @@
                 <dd>Thursday 10 May, 4.05pm</dd>
               </dl>
               <a href="#">January Exam Timetable</a> | <a href="#">Exam Regulations</a>
+              </div>
             </div>
 
             <div id="study-rooms" class="widget">
               <h2>Bookable Study rooms</h2>
 
-              <dl class="tabs">
+              <div class="widget-content">
+
+              <dl class="tabs ">
                 <dd class="active"><a href="#bookable-study">Study Rooms</a></dd>
                 <dd><a href="#bookable-assistive">Assistive Technology Rooms</a></dd>
               </dl>
@@ -175,31 +183,36 @@
                 </li>
               </ul>
               
+              </div>
             </div>
 
           </section>
 
           <section class="six columns">
 
-            <div id="calendar" class="widget">
+            <div id="calendar" class="widget live-data">
               <h2>Moodle Calendar</h2>
-              <div class="month-calendar">
+
+              <div class="widget-content">
+                <div class="month-calendar">
+                </div>
+                <dl>
+                  <!-- sample data:
+                       <dt>10am</dt>
+                  <dd><a href="#">Event of note</a></dd>
+                  <dt>12pm</dt>
+                  <dd><a href="#">Event of note</a></dd>
+                  <dt>2.30pm</dt>
+                  <dd><a href="#">Event of note</a></dd>
+                  -->
+                </dl>
               </div>
-              <dl>
-                <!-- sample data:
-                <dt>10am</dt>
-                <dd><a href="#">Event of note</a></dd>
-                <dt>12pm</dt>
-                <dd><a href="#">Event of note</a></dd>
-                <dt>2.30pm</dt>
-                <dd><a href="#">Event of note</a></dd>
-                -->
-              </dl>
+
             </div>
 
-            <div id="modules" class="widget">
+            <div id="modules" class="widget live-data">
               <h2>Modules</h2>
-              <dl>
+              <dl class="widget-content">
                 <dt><a href="#">No modules</a></dt>
                 <!-- sample data:
                 <dt>INM401 <a href="#">Information Architecture</a></dt>
@@ -231,7 +244,7 @@
                 <a href="#">All Files</a>
               </div>
               
-              <ul class="files-list">
+              <ul class="files-list widget-content">
                 <li class="folder">Coursework</li>
                 <li class="folder">Photos</li>
                 <li class="folder">Dissertation</li>
@@ -257,41 +270,48 @@
 
           <div id="about" class="widget">
 	    <h2>Student Name</h2>
-            <img src="http://www.geekpress.fr/wp-content/uploads/users/wordpress_avatar.jpg?s=50" class="" alt="Picture of <student name>" />
-	    <dl>
-              <dd><a href="#">&lt;Course name&gt;</a></dd>
-              <dd><a href="#">&lt;Department&gt;</a></dd>
-            </dl>
-            <ul class="social-links">
-              <li class="twitter">twitter</li>
-              <li class="www">www</li>
-              <li class="flickr">flickr</li>
-              <li class="linkedin">linkedin</li>
-              <li class="facebook">facebook</li>
-              <li class="skype">skype</li>
-            </ul>
+
+            <div class="widget-content">
+
+              <img src="http://www.geekpress.fr/wp-content/uploads/users/wordpress_avatar.jpg?s=50" class="" alt="Picture of <student name>" />
+	      <dl>
+                <dd><a href="#">&lt;Course name&gt;</a></dd>
+                <dd><a href="#">&lt;Department&gt;</a></dd>
+              </dl>
+              <ul class="social-links">
+                <li class="twitter">twitter</li>
+                <li class="www">www</li>
+                <li class="flickr">flickr</li>
+                <li class="linkedin">linkedin</li>
+                <li class="facebook">facebook</li>
+                <li class="skype">skype</li>
+              </ul>
+            </div>
           </div>
 
-          <div id="library" class="widget">
+          <div id="library" class="widget live-data">
 	    <h2>Libary</h2>
 
-	    <dl class="tabs">
-	      <dd class="active"><a href="#lib-loans">Loans</a></dd>
-	      <dd><a href="#lib-holds">Holds</a></dd>
-	      <dd><a href="#lib-fines">Fines</a></dd>
-	    </dl>
-            
-	    <ul class="tabs-content">
-	      <li class="active" id="lib-loansTab">
-                <ol id="books"></ol>
-              </li>
-	      <li id="lib-holdsTab">
-                <ol id="holds"></ol>
-              </li>
-	      <li id="lib-finesTab">
-                <ol id="fines"></ol>
-              </li>
-	    </ul>
+            <div class="widget-content">
+
+	      <dl class="tabs">
+	        <dd class="active"><a href="#lib-loans">Loans</a></dd>
+	        <dd><a href="#lib-holds">Holds</a></dd>
+	        <dd><a href="#lib-fines">Fines</a></dd>
+	      </dl>
+              
+	      <ul class="tabs-content">
+	        <li class="active" id="lib-loansTab">
+                  <ol id="books"></ol>
+                </li>
+	        <li id="lib-holdsTab">
+                  <ol id="holds"></ol>
+                </li>
+	        <li id="lib-finesTab">
+                  <ol id="fines"></ol>
+                </li>
+	      </ul>
+            </div>
           </div>
 
           <div id="computer-labs" class="widget">
@@ -299,7 +319,7 @@
               <h2>Computer Labs</h2>
               <span>Updated at ...</span>
             </div>
-            <table>
+            <table class="widget-content">
               <thead>
                 <tr>
                   <th>Room</th>
