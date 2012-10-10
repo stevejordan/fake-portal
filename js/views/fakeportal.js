@@ -45,7 +45,7 @@ define([
 
             //while on localhost, we make CORS requests and need
             //withCredentials to be set
-            if (document.location.host === 'localhost') {
+            if (/localhost|webapps/.test(document.location.host)) {
                 ajaxOpts = {
                     xhrFields: {
                         withCredentials: true

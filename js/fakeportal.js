@@ -20,7 +20,7 @@ require.config({
         },
         'foundation': {
             deps: [ 
-                'jquery', 
+                'jquery',
                 'vendor/foundation/modernizr.foundation',
                 'vendor/foundation/jquery.placeholder',
                 'vendor/foundation/jquery.foundation.forms',
