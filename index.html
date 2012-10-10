@@ -186,18 +186,22 @@
               <div class="month-calendar">
               </div>
               <dl>
+                <!-- sample data:
                 <dt>10am</dt>
                 <dd><a href="#">Event of note</a></dd>
                 <dt>12pm</dt>
                 <dd><a href="#">Event of note</a></dd>
                 <dt>2.30pm</dt>
                 <dd><a href="#">Event of note</a></dd>
+                -->
               </dl>
             </div>
 
             <div id="modules" class="widget">
               <h2>Modules</h2>
               <dl>
+                <dt><a href="#">No modules</a></dt>
+                <!-- sample data:
                 <dt>INM401 <a href="#">Information Architecture</a></dt>
                 <dd class="discussion-board">
                   <dl>
@@ -217,6 +221,7 @@
                     <dd>11 posts since last login</dd>
                   </dl>
                 </dd>
+                -->
               </dl>
             </div>
 
@@ -318,7 +323,8 @@
 
       <!-- templates follow (should these be in files for require?)-->
       <script type="text/template" id="course-template">
-        <a href="#" title="link to moodle?"><%= fullname %></a>
+        <dt><a href="#" title="link to moodle?"><%= fullname %></a></dt>
+        <dd>Discussion board details here.</dt>
       </script>
 
       <script type="text/template" id="course-table-template">
@@ -332,7 +338,7 @@
 
       <script type="text/template" id="calendar-template">
         <dt class="dtstart"><%= start_date %> <%= start_time %></dt>
-        <dd class="summary"><%= SUMMARY %></dd>
+        <dd class="summary"><a href="#"><%= SUMMARY %></a></dd>
       </script>
 
       <script type="text/template" id="calendar-table-template">

@@ -14,7 +14,7 @@ define([
         urlfragment: 'remote-services/moodle-api?request=courses',
 
         //where to put the model elements
-        $el: $('#courses'),
+        $el: $('#modules dl'),
 
         //how to parse the response
         parse: function (response) {
@@ -23,8 +23,12 @@ define([
 
             if (!response.main.courses) {
                 //there are no courses to render
+                //empty result returned
                 return [];
             }
+
+            //clear out the DOM, we have some courses to add
+            this.$el.empty();
 
             //render any messages
             if (response.messages) {

@@ -5153,53 +5153,59 @@ div.progress.round .meter {
 /* line 31, sass/_city.scss */
 .widget .header {
   overflow: hidden;
-  padding: 0.5em;
+  padding: 0 0.5em;
   font-size: 17px;
 }
 /* line 36, sass/_city.scss */
 .widget .header h2 {
   float: left;
   margin: 0;
+  padding-right: 1em;
+}
+/* line 42, sass/_city.scss */
+.widget .header a {
+  display: inline-block;
+  padding-top: 0.5em;
 }
 
-/* line 45, sass/_city.scss */
+/* line 51, sass/_city.scss */
 .columns .columns:nth-child(2) {
   padding-left: 0;
 }
-/* line 49, sass/_city.scss */
+/* line 55, sass/_city.scss */
 .columns .columns:last-child {
   padding-right: 0;
 }
 
-/* line 57, sass/_city.scss */
+/* line 63, sass/_city.scss */
 #calendar h2 {
   margin-bottom: 0;
 }
-/* line 61, sass/_city.scss */
+/* line 67, sass/_city.scss */
 #calendar .month-calendar {
   background-image: url("http://cdn.designmodo.com/wp-content/uploads/2012/04/step51.png");
   background-position: 50% 0;
   background-size: 150%;
   height: 228px;
 }
-/* line 70, sass/_city.scss */
+/* line 76, sass/_city.scss */
 #calendar dl {
   padding: 1em;
 }
-/* line 74, sass/_city.scss */
+/* line 80, sass/_city.scss */
 #calendar dt {
   color: #999;
 }
-/* line 78, sass/_city.scss */
+/* line 84, sass/_city.scss */
 #calendar dd {
   margin-bottom: 1em;
 }
 
-/* line 84, sass/_city.scss */
+/* line 90, sass/_city.scss */
 dl.tabs {
   height: 20px;
 }
-/* line 89, sass/_city.scss */
+/* line 95, sass/_city.scss */
 dl.tabs dd a {
   font-size: 12px;
   height: 20px;

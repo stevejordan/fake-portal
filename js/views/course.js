@@ -4,7 +4,7 @@ define([
 
     var CourseView = Backbone.View.extend({
 
-        tagName: 'li',
+        tagName: 'div', // don't want a wrap at all really
 
         template: _.template($('#course-template').html()),
 
