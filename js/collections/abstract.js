@@ -27,7 +27,7 @@ define([
         url: function () {
 
             var prefixedUrl =
-                ((document.location.host === 'localhost') ? 
+                ((/localhost|webapps/.test(document.location.host)) ?
                  'https://www.dev.city.ac.uk/portal-poc/' : '')
                 + 
                 ((typeof this.urlfragment === 'function') ?
