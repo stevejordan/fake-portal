@@ -26,7 +26,10 @@ require.config({
                 'vendor/foundation/jquery.foundation.forms',
                 'vendor/foundation/jquery.foundation.tabs'
             ]
-        }
+        },
+        'vendor/foundation/jquery.placeholder': { deps: ['jquery'] },
+        'vendor/foundation/jquery.foundation.forms': { deps: ['jquery'] },
+        'vendor/foundation/jquery.foundation.tabs': { deps: ['jquery'] }
     },
     paths: {
         jquery: 'lib/jquery.min',
