@@ -6,10 +6,13 @@ define([
     'collections/fines',
     'collections/holds',
     'collections/calendar',
+    'collections/computerRooms',
+    'models/person',
     'namespace',
     'helpers'
 ], function ( $, Backbone, CoursesCollection, BooksCollection, 
-              FinesCollection, HoldsCollection, Calendar, ns, Helpers ) {
+              FinesCollection, HoldsCollection, Calendar, 
+              ComputerRoomCollection, Person, ns, Helpers ) {
            
     var FakePortalView = Backbone.View.extend({
 
@@ -42,11 +45,12 @@ define([
             ns.fines = new FinesCollection();
             ns.holds = new HoldsCollection();
             ns.calendar = new Calendar();
+            ns.computerRooms = new ComputerRoomCollection();
 
             //while on localhost, we make CORS requests and need
             //withCredentials to be set
             if (/localhost|webapps/.test(document.location.host)) {
-                ajaxOpts = {
+                ns.ajaxOpts = {
                     xhrFields: {
                         withCredentials: true
                     }
@@ -54,13 +58,13 @@ define([
             }
 
             //load up the data
-            ns.courses.fetch(ajaxOpts);
-            ns.books.fetch(ajaxOpts);
-            ns.fines.fetch(ajaxOpts);
-            ns.holds.fetch(ajaxOpts);
-
-            //pull in calendar
-            ns.calendar.fetch(ajaxOpts);
+            ns.courses.fetch(ns.ajaxOpts);
+            ns.books.fetch(ns.ajaxOpts);
+            ns.fines.fetch(ns.ajaxOpts);
+            ns.holds.fetch(ns.ajaxOpts);
+            ns.computerRooms.fetch();
+            ns.person = new Person();
+            ns.calendar.fetch(ns.ajaxOpts);
 
         },
 

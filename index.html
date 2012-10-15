@@ -314,11 +314,9 @@
             </div>
           </div>
 
-          <div id="computer-labs" class="widget">
-            <div class="header">
-              <h2>Computer Labs</h2>
-              <span>Updated at ...</span>
-            </div>
+          <div id="computer-labs" class="widget live-data">
+            <h2>Computer Labs</h2>
+            <span class="updated">Updated at ...</span>
             <table class="widget-content">
               <thead>
                 <tr>
@@ -415,6 +413,21 @@
         <td><%= pickupLocationMeaning %></td>
         <td><% print(FP.Helpers.atomDateParser(timeHoldPlaced)); %></td>
         <td><a href="<%= predictableURL %>"><%= title %></a></td>
+      </script>
+
+      <script type="text/template" id="person-template">
+        <h2><%= givenname %> <%= sn %></h2>
+      </script>
+
+      <script type="text/template" id="welcome-bar-template">
+        Hi <%= givenname %>, <%= slogan %>
+      </script>
+
+      <script type="text/template" id="computer-room-template">
+        <td><%= name %></td>
+        <td><% var t = available + inUse;
+               print( (t / 100) * inUse ); %>%</td>
+        <td><% print(available + inUse); %></td>
       </script>
 
       <div id="working">Working...</div>

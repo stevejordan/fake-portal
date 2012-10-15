@@ -26,12 +26,15 @@ define([
         //when in development force all urls over CORS to www.dev
         url: function () {
 
-            var prefixedUrl =
-                ((/localhost|webapps/.test(document.location.host)) ?
-                 'https://www.dev.city.ac.uk/portal-poc/' : '')
-                + 
-                ((typeof this.urlfragment === 'function') ?
-                 this.urlfragment() : this.urlfragment);
+            var prefixedUrl = (/localhost|webapps/.test(document.location.host)) ?
+                'https://www.dev.city.ac.uk/portal-poc/' : '';
+
+            if (this.urlfragment) {
+                
+                prefixedUrl += (typeof this.urlfragment === 'function') ?
+                    this.urlfragment() : this.urlfragment;
+
+            }
 
             return prefixedUrl;
 
