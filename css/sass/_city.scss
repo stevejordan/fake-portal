@@ -1,0 +1,114 @@
+//colours
+$heading_bg: #333;
+$heading_fg: #ddd;
+
+.welcome {
+    
+    font-size: ms(3);
+    padding-bottom: 1em;
+
+}
+
+.widget {
+    @extend .panel;
+    padding: 0;
+    overflow: hidden;
+
+    h2, .header {
+        color: $heading_fg;
+        background: $heading_bg;
+    }
+
+    h2 {
+        font-size: ms(2);
+        padding: 0.125em 0.5em;
+    }
+
+    h3 {
+        font-size: ms(1);
+    }
+
+    .header { 
+        overflow: hidden;
+        padding: 0 0.5em;
+        font-size: ms(1);
+
+        h2 {
+            float: left;
+            margin: 0;
+            padding-right: 1em;
+        }
+
+        a {
+            display: inline-block;
+            padding-top: 0.5em;
+        }
+    }
+
+    .widget-content {
+        padding: 0 1em 1em;
+    }
+
+}
+
+.columns {
+
+    .columns:nth-child(2) {
+        padding-left: 0;
+    }
+
+    .columns:last-child {
+        padding-right: 0;
+    }
+
+}
+
+#calendar {
+    
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .month-calendar {
+        background: {
+            image: url('http://cdn.designmodo.com/wp-content/uploads/2012/04/step51.png');
+            position: 50% 0;
+            size: 150%;
+        }
+        height: 228px;
+    }
+
+    dt {
+        color: #999;
+    }
+
+    dd {
+        margin-bottom: 1em;
+    }
+
+}
+
+dl.tabs {
+
+    $tabs_height: 20px;
+    height: $tabs_height;
+
+    dd a {
+        font-size: 12px;
+        height: $tabs_height;
+        line-height: $tabs_height;
+        padding: 0 10px;
+    }
+
+}
+
+.live-data {
+
+    &::after {
+        content: 'LIVE';
+        color: white;
+        background: red;
+        padding: 0.125em 0.5em;
+    }
+
+}

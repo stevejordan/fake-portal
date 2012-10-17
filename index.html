@@ -53,7 +53,7 @@
 	  <hr />
         </div>
       </div>
-      
+
       <div class="row">
 
         <div class="twelve columns welcome">
@@ -91,7 +91,7 @@
                   <li>Message 3</li>
                 </ol>
               </section>
-            </div>            
+            </div>
           </div>
 
           <section class="six columns">
@@ -111,7 +111,7 @@
                 <li>...</li>
               </ol>
             </div>
-            
+
             <div id="assignments" class="widget">
               <h2>Assignments, Exams</h2>
               <div class="widget-content">
@@ -139,7 +139,7 @@
                 <dd class="active"><a href="#bookable-study">Study Rooms</a></dd>
                 <dd><a href="#bookable-assistive">Assistive Technology Rooms</a></dd>
               </dl>
-              
+
               <ul class="tabs-content">
                 <li id="#bookable-studyTab" class="active">
                   <table>
@@ -161,7 +161,7 @@
                     </tbody>
                   </table>
                 </li>
-                <li id="#bookable-assistiveTab"> 
+                <li id="#bookable-assistiveTab">
                   <table>
                     <thead>
                       <tr>
@@ -182,7 +182,7 @@
                   </table>
                 </li>
               </ul>
-              
+
               </div>
             </div>
 
@@ -243,7 +243,7 @@
                 <h2>Office 365 Files</h2>
                 <a href="#">All Files</a>
               </div>
-              
+
               <ul class="files-list widget-content">
                 <li class="folder">Coursework</li>
                 <li class="folder">Photos</li>
@@ -299,7 +299,7 @@
 	        <dd><a href="#lib-holds">Holds</a></dd>
 	        <dd><a href="#lib-fines">Fines</a></dd>
 	      </dl>
-              
+
 	      <ul class="tabs-content">
 	        <li class="active" id="lib-loansTab">
                   <ol id="books"></ol>
@@ -368,7 +368,7 @@
 
       <script type="text/template" id="book-template">
         <a href="<%= predictableURL %>"><%= title %></a> (<%= callNumber %>)<br />
-        since: <% print(FP.Helpers.atomDateParser(dateCheckedOut)); %>, 
+        since: <% print(FP.Helpers.atomDateParser(dateCheckedOut)); %>,
         due on: <% print(FP.Helpers.atomDateParser(dueDate)); %>
       </script>
 
@@ -381,9 +381,9 @@
       </script>
 
       <script type="text/template" id="fine-template">
-        <% print(FP.Helpers.atomDateParser(datePaid)); %>, paid £<%= amountPaid %> for 
+        <% print(FP.Helpers.atomDateParser(datePaid)); %>, paid £<%= amountPaid %> for
         <a href="<%= predictableURL %>"><%= itemTitle %></a> (<%= chargeType %>)<br />
-        <%= description %>    
+        <%= description %>
       </script>
 
       <script type="text/template" id="fine-table-template">
@@ -400,10 +400,10 @@
       </script>
 
       <script type="text/template" id="hold-template">
-        <% print(FP.Helpers.atomDateParser(timeHoldPlaced)); %> 
-        <a href="<%= predictableURL %>"><%= title %></a> requested between 
-        <% print(FP.Helpers.atomDateParser(notWantedBefore)); %> - 
-        <% print(FP.Helpers.atomDateParser(notWantedAfter)); %> from 
+        <% print(FP.Helpers.atomDateParser(timeHoldPlaced)); %>
+        <a href="<%= predictableURL %>"><%= title %></a> requested between
+        <% print(FP.Helpers.atomDateParser(notWantedBefore)); %> -
+        <% print(FP.Helpers.atomDateParser(notWantedAfter)); %> from
         <%= pickupLocationMeaning %>
       </script>
 
@@ -416,7 +416,57 @@
       </script>
 
       <script type="text/template" id="person-template">
-        <h2><%= givenname %> <%= sn %></h2>
+        <h2><%= fullname %></h2>
+        <span class="edit"></span>
+        <div class="widget-content">
+          <img src="<%= profileimageurl %>" alt="<%= firstname %>'s profile image" />
+          <ol>
+
+            <!-- school -->
+            <% if (typeof udbschoolid !== 'undefined'
+                   && udbschoolid) { %>
+            <li><%= udbschoolid %></li>
+            <% } else { %>
+            <!-- no school set -->
+            <% } %>
+
+            <!-- dept -->
+            <% if (typeof udbdepartmentid !== 'undefined'
+                   && udbdepartmentid) { %>
+            <li><%= udbdepartmentid %></li>
+            <% } else { %>
+            <!-- no department set -->
+            <% } %>
+
+          </ol>
+          <ol class="social-links">
+
+            <% if (typeof twitter !== 'undefined') { %>
+            <li class="skype"><%= skype %></li>
+            <% } %>
+
+            <% if (typeof url !== 'undefined') { %>
+            <li class="url"><%= url %></li>
+            <% } %>
+
+            <% if (typeof flickr !== 'undefined') { %>
+            <li class="flickr"><%= flickr %></li>
+            <% } %>
+
+            <% if (typeof linkedin !== 'undefined') { %>
+            <li class="linkedin"><%= linkedin %></li>
+            <% } %>
+
+            <% if (typeof facebook !== 'undefined') { %>
+            <li class="facebook"><%= facebook %></li>
+            <% } %>
+
+            <% if (typeof skype !== 'undefined') { %>
+            <li class="skype"><%= skype %></li>
+            <% } %>
+
+          </ol>
+        </div>
       </script>
 
       <script type="text/template" id="welcome-bar-template">
