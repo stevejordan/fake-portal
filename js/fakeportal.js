@@ -7,6 +7,13 @@
 */
 
 require.config({
+    paths: {
+        jquery: 'lib/jquery.min',
+        underscore: 'lib/underscore-min',
+        backbone: 'lib/backbone-min',
+        foundation: 'vendor/foundation/app',
+        highcharts: 'http://code.highcharts.com/highcharts'
+    },
     shim: {
         'underscore': {
             exports: '_'
@@ -29,13 +36,11 @@ require.config({
         },
         'vendor/foundation/jquery.placeholder': { deps: ['jquery'] },
         'vendor/foundation/jquery.foundation.forms': { deps: ['jquery'] },
-        'vendor/foundation/jquery.foundation.tabs': { deps: ['jquery'] }
-    },
-    paths: {
-        jquery: 'lib/jquery.min',
-        underscore: 'lib/underscore-min',
-        backbone: 'lib/backbone-min',
-        foundation: 'vendor/foundation/app',
+        'vendor/foundation/jquery.foundation.tabs': { deps: ['jquery'] },
+        'highcharts': {
+            deps: ['jquery'],
+            exports: 'Highcharts'
+        }
     }
 });
 

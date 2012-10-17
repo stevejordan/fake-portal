@@ -425,7 +425,7 @@
 
       <script type="text/template" id="computer-room-template">
         <td><%= name %></td>
-        <td><% var t = available + inUse;
+        <td class="chart"><% var t = available + inUse;
                print( parseFloat((t / 100) * inUse).toFixed(2) ); %>%</td>
         <td><% print(available + inUse); %></td>
       </script>
