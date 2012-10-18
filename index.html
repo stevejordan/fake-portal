@@ -79,7 +79,11 @@
                 <li class="finance">Finance or fee type alert.</li>
                 <li class="event">A worthy event is happening.</li>
                 <li class="course-message">Exam or coursework result return message or alert.</li>
+                <section id="servicenow">
                 <li class="it-service-desk">IT Service desk announcement.</li>
+                <li class="it-service-desk">IT Service desk announcement.</li>
+                <li class="it-service-desk">IT Service desk announcement.</li>
+                </section>
                 <li class="twitter">Tweet from S4S (or similar).</li>
                 <li class="moodle">Moodle 2.0 virtual learning environment goes live!</li>
                 <li class="rss">CityNews for Students blog feed.</li>
@@ -236,7 +240,7 @@
                 </dd>
                 -->
               </dl>
-            </div>
+            </div><li class="it-service-desk">IT Service desk announcement.</li>
 
             <div id="files" class="widget">
               <div class="header">
@@ -428,6 +432,19 @@
         <td class="chart"><% var t = available + inUse;
                print( parseFloat((t / 100) * inUse).toFixed(2) ); %>%</td>
         <td><% print(available + inUse); %></td>
+      </script>
+
+      <script type="text/template" id="servicenow-template">
+        <li class="it-service-desk">
+            <a href="https://cityunidev.service-now.com/nav_to.do?uri=<% print(FP.Helpers.parseServicenowPage(number)); %>.do?sys_id=<%= sys_id %>&sysparm_view=Default"><%= number %></a>:&nbsp;<%= short_description %>, created: <% print(FP.Helpers.atomDateParser(opened_at)); %>
+         
+        </li>
+      </script>
+
+      <script type="text/template" id="servicenow-table-template">
+        <td><%= number %></td>
+        <td><%= short_description %></td>
+        <td><%= opened_at %></td>
       </script>
 
       <div id="working">Working...</div>

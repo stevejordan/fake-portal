@@ -7,12 +7,14 @@ define([
     'collections/holds',
     'collections/calendar',
     'collections/computerRooms',
+    'collections/servicenowMessages',
     'models/person',
     'namespace',
     'helpers'
 ], function ( $, Backbone, CoursesCollection, BooksCollection, 
               FinesCollection, HoldsCollection, Calendar, 
-              ComputerRoomCollection, Person, ns, Helpers ) {
+              ComputerRoomCollection, ServicenowMessagesCollection,
+              Person, ns, Helpers ) {
            
     var FakePortalView = Backbone.View.extend({
 
@@ -46,6 +48,7 @@ define([
             ns.holds = new HoldsCollection();
             ns.calendar = new Calendar();
             ns.computerRooms = new ComputerRoomCollection();
+            ns.servicenowMessages = new ServicenowMessagesCollection();
 
             //while on localhost, we make CORS requests and need
             //withCredentials to be set
@@ -63,6 +66,7 @@ define([
             ns.fines.fetch(ns.ajaxOpts);
             ns.holds.fetch(ns.ajaxOpts);
             ns.computerRooms.fetch();
+            ns.servicenowMessages.fetch();
             ns.person = new Person();
             ns.calendar.fetch(ns.ajaxOpts);
 
