@@ -127,3 +127,29 @@ dl.tabs {
     }
 
 }
+
+#noticeboard {
+
+    .widget-content li {
+        list-style: none;
+    }
+
+    li span {
+        font-size: 1.5em;
+    }
+
+    .major, .event, .closure, .rss {
+        span {
+            color: red;
+        }
+    }
+
+    .
+
+    .marketing-message {
+        li {
+            padding: 0.5em 0;
+        }
+    }
+
+}
