@@ -43,10 +43,25 @@ $heading_fg: #ddd;
             display: inline-block;
             padding-top: 0.5em;
         }
+
+        position: relative;
+
     }
 
     .widget-content {
         padding: 0 1em 1em;
+    }
+
+    .edit {
+        position: absolute;
+        top: 22%; //this should be 50% no?
+        right: 1em;
+        cursor: pointer;
+
+        &:hover {
+            color: $highlightColor;
+        }
+
     }
 
 }

@@ -416,8 +416,10 @@
       </script>
 
       <script type="text/template" id="person-template">
-        <h2><%= fullname %></h2>
-        <span class="edit"></span>
+        <div class="header">
+          <h2><%= fullname %></h2>
+          <span class="edit foundicon-settings"></span>
+        </div>
         <div class="widget-content">
           <img src="<%= profileimageurl %>" alt="<%= firstname %>'s profile image" />
           <ol>
