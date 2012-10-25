@@ -44,7 +44,44 @@
 
   </head>
   <body>
+    <header class="row">
+        <ul class="clearfix" id="cross-domain-nav">
+            <li><a href="http://www.city.ac.uk/" title="City Unversity London homepage">city.ac.uk</a></li>
+            <li><a href="https://outweb.city.ac.uk/" title="University web email">Email</a></li>
+            <li><a href="http://moodle.city.ac.uk/" title="Virtual Learning Environment">Moodle</a></li>
+            <li><a href="http://www.city.ac.uk/library/">Library</a></li>
+            <li><a href="https://intranet.city.ac.uk/students/">Student Intranet</a></li>
+            <li class="active"><a href=""><strong>Student Gateway (Beta)</strong></a></li>
+            <li><a href="https://intranet.city.ac.uk/staff/">Staff Intranet</a></li>
+        </ul>
 
+        <div id="mast1" class="cul-supplied clearfix">
+            <a id="global-nav-toggler" href="#global-nav-reponsive"><span class="icon-responsive-nav"></span><span class="text">Menu</span></a>
+            <ul id="global-nav1" class="clearfix">
+                <li class="courses"><a id="course-nav" href="http://www.city.ac.uk/courses">Academic Resources</a></li>
+                <li><a class="mega" id="course-nav" href="http://www.city.ac.uk/courses">Enrolment & Administration</a></li>
+                <li><a class="mega" id="course-nav" href="http://www.city.ac.uk/courses">Health & Wellbeing</a></li>
+                <li><a class="mega" id="course-nav" href="http://www.city.ac.uk/courses">Student Support</a></li>
+                <li><a class="mega" id="course-nav" href="http://www.city.ac.uk/courses">Careers & Employment</a></li>
+            </ul><!-- search-->
+
+            <form id="search" method="get" action="http://www.city.ac.uk/search?">
+                <p>
+                    <label for="query">Search Website</label>
+                    <input type="text" name="query" value="" id="query" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                    <input type="hidden" name="collection" value="main-all">
+                    <input type="submit" value="Search" class="s-button" id="s-button">
+                </p>
+            </form>         
+        </div><!--#mast1-->
+        <h1 id="logo">
+            <a href="/">
+                <span class="hidden">Home</span>
+                <span><img src="https://s1.city.ac.uk/i/city-logo.png" alt="City University London" height="65" width="230"></span>
+            </a>
+        </h1>
+        <h2>Student Gateway Beta</h2>
+    </header><!--header-->
     <div id="content">
 
       <div class="row">
@@ -507,6 +544,65 @@
       <div id="error"></div>
 
     </div>
+    <script>
+        $(document).ready(function ($) {
 
+            var $windowObj = $(window),
+                windowWidth,
+                $navToggler = $('#global-nav-toggler'),
+                $globalNav = $('#global-nav1'),
+                /* resize event handlers */
+                didResize = false,
+                breakpoints = { 
+                    'tabletPortrait' : 768,
+                    'phonePortrait' : 480
+                };
+
+            function getWindowWidth(){
+                var wWidth =  Math.round($windowObj.width());
+                return wWidth;
+            }
+
+            function windowResized(windowWidth) {
+
+                if (windowWidth >= breakpoints.tabletPortrait) {
+                    $navToggler.removeClass("active");
+                    //clear any inline styles
+                    $globalNav.removeAttr("style");
+                }
+            }
+
+            function pageInit(){
+
+                $navToggler.bind('click', function () {
+                    $navToggler.toggleClass('active');
+                    $globalNav.slideToggle('slow', function() {
+                        $globalNav.toggleClass('active');
+                    });
+                });
+            }//pageInit
+
+            windowWidth = getWindowWidth();
+
+            $windowObj.resize(function () {
+                didResize = true;
+            });
+
+            setInterval(function() {
+                if ( didResize ) {
+                    didResize = false;
+                    var newWindowWidth = getWindowWidth();
+
+                    if (newWindowWidth !== windowWidth) {
+                        windowWidth = newWindowWidth;
+                        windowResized(windowWidth);
+                    }
+                }
+            }, 250); // setInterval
+
+            pageInit();
+
+        });
+    </script>
   </body>
 </html>
