@@ -49,7 +49,7 @@
 
       <div class="row">
         <div class="twelve columns">
-	  <h1>Student Portal Beta</h1>
+	  <h1>Student Gateway Beta</h1>
 	  <hr />
         </div>
       </div>
@@ -72,23 +72,34 @@
             <div class="widget-content">
 
               <ol class="eight columns widget-content">
-                <li class="major">Homicidal maniac rampaging through College Building!</li>
-                <li class="warning">Coursework deadline missed.</li>
-                <li class="photos">Awesome photoshoot with/of/about the Vice-Chancellor.</li>
-                <li class="closure">Facility closed for repair, upgrade or something else.</li>
-                <li class="finance">Finance or fee type alert.</li>
-                <li class="event">A worthy event is happening.</li>
-                <li class="course-message">Exam or coursework result return message or alert.</li>
-                <li class="it-service-desk">IT Service desk announcement.</li>
-                <li class="twitter">Tweet from S4S (or similar).</li>
-                <li class="moodle">Moodle 2.0 virtual learning environment goes live!</li>
-                <li class="rss">CityNews for Students blog feed.</li>
+                <li class="major">
+                  <span class="foundicon-idea"></span> Snow update: College building still closed.</li>
+                <li class="warning">
+                  <span class="foundicon-"></span>Coursework deadline missed.</li>
+                <li class="photos">
+                  <span class="foundicon-photo"></span>Awesome photoshoot with/of/about the Vice-Chancellor.</li>
+                <li class="closure">
+                  <span class="foundicon-error"></span>Facility closed for repair, upgrade or something else.</li>
+                <li class="finance">
+                  <span class="foundicon-"></span>Finance or fee type alert.</li>
+                <li class="event">
+                  <span class="foundicon-calendar"></span>A worthy event is happening.</li>
+                <li class="course-message">
+                  <span class="foundicon-graph"></span>Exam or coursework result return message or alert.</li>
+                <li class="it-service-desk">
+                  <span class="foundicon-"></span>IT Service desk announcement.</li>
+                <li class="twitter">
+                  <span class="foundicon-twitter"></span>Tweet from S4S (or similar).</li>
+                <li class="moodle">
+                  <span class="foundicon-website"></span>Moodle 2.0 virtual learning environment goes live!</li>
+                <li class="rss">
+                  <span class="foundicon-rss"></span>CityNews for Students blog feed.</li>
               </ol>
               <section class="marketing-message four columns">
                 <ol>
-                  <li>Message 1</li>
-                  <li>Message 2</li>
-                  <li>Message 3</li>
+                  <li><img src="images/announcements/timetables.png" /></li>
+                  <li><img src="images/announcements/su-exec.png" /></li>
+                  <li><img src="images/announcements/service-desk.png" /></li>
                 </ol>
               </section>
             </div>
@@ -290,7 +301,7 @@
           </div>
 
           <div id="library" class="widget live-data">
-	    <h2>Libary</h2>
+	    <h2>Library</h2>
 
             <div class="widget-content">
 
@@ -416,8 +427,10 @@
       </script>
 
       <script type="text/template" id="person-template">
-        <h2><%= fullname %></h2>
-        <span class="edit"></span>
+        <div class="header">
+          <h2><%= fullname %></h2>
+          <span class="edit foundicon-settings"></span>
+        </div>
         <div class="widget-content">
           <img src="<%= profileimageurl %>" alt="<%= firstname %>'s profile image" />
           <ol>
@@ -467,6 +480,16 @@
 
           </ol>
         </div>
+      </script>
+
+      <script type="text/template" id="person-form-template">
+        <form method="post" action="">
+          <fieldset>
+            <input type="upload" name="image" value="" />
+          </fieldset>
+          <fieldset>
+          </fieldset>
+        </form>
       </script>
 
       <script type="text/template" id="welcome-bar-template">

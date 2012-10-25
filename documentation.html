@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Documentation for the client side "portal" page"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-10-03 09:41:04 BST"/>
+<meta name="generated" content="2012-10-23 15:59:33 BST"/>
 <meta name="author" content="Steve Jordan"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -141,6 +141,7 @@
 </ul>
 </li>
 <li><a href="#sec-4">4 Future data sources</a></li>
+<li><a href="#sec-5">5 git setup</a></li>
 </ul>
 </div>
 </div>
@@ -411,6 +412,9 @@
 <p>   using UQL<sub>Millenium</sub> classes to structure the liasing with millenuim api
    work done in msm2an0:/web/docs/webapps/matrix/services/portal-poc/millenium-uql.php
 </p>
+<p>
+   Lucy Clifford's test account is under her username sbbb134
+</p>
 </div>
 </div>
 
@@ -421,13 +425,39 @@
 <div class="outline-text-2" id="text-4">
 
 
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> git setup</h2>
+<div class="outline-text-2" id="text-5">
+
+<p>  We have a central repo served from
+  msman0:/web/ci/git-repos/fkeportal.git master on this is the one to
+  push/pull from.
+</p>
+<p>
+  There is a live version of the app hosted on mam2an0 (webapps.test)
+  viewable at <a href="#webapps.test.city.ac.uk-portal-poc">webapps.test.city.ac.uk/portal-poc</a>
+</p>
+<p>
+  To update this you need to log into msm2an0.unix2.test as s1sync
+  and:
+</p>
+
+
+
+<pre class="src src-sh"><span style="font-weight: bold;">cd</span> /web/docs/webapps/portal-poc
+git pull
+</pre>
 
 </div>
 </div>
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2012-10-03 09:41:04 BST</p>
+<p class="date">Date: 2012-10-23 15:59:33 BST</p>
 <p class="author">Author: Steve Jordan</p>
 <p class="creator">Org version 7.8.06 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

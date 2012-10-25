@@ -39,6 +39,14 @@ define([
                 $('table[id$="table"]').hide();
             }
 
+            //any edit buttons
+            $('.edit').bind('click', function () {
+
+                //find which widget
+                var widget = $(this).parentsUntil('.widget').filter('.widget');
+
+            });
+
             //instantiate the collections
             ns.courses = new CoursesCollection();
             ns.books = new BooksCollection();

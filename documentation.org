@@ -68,6 +68,22 @@ Documentation for the client side "portal" page
    using UQL_Millenium classes to structure the liasing with millenuim api
    work done in msm2an0:/web/docs/webapps/matrix/services/portal-poc/millenium-uql.php
 
+   Lucy Clifford's test account is under her username sbbb134
+
 * Future data sources
 
+* git setup
+  We have a central repo served from
+  msman0:/web/ci/git-repos/fkeportal.git master on this is the one to
+  push/pull from.
 
+  There is a live version of the app hosted on mam2an0 (webapps.test)
+  viewable at [[webapps.test.city.ac.uk/portal-poc][webapps.test.city.ac.uk/portal-poc]]
+
+  To update this you need to log into msm2an0.unix2.test as s1sync
+  and:
+
+  #+BEGIN_SRC sh
+cd /web/docs/webapps/portal-poc
+git pull
+  #+END_SRC
