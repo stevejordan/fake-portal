@@ -118,15 +118,9 @@
                   <span class="foundicon-calendar"></span>A worthy event is happening.</li>
                 <li class="course-message alert">
                   <span class="foundicon-graph"></span>Exam or coursework result return message or alert.</li>
-                <section id="servicenow">
+                <section id="servicenow" class="live-data">
                   <li class="it-service-desk alert">
-                    <span class="foundicon"></span>IT Service desk announcement.</li>
-                  <li class="it-service-desk">
-                    <span class="foundicon"></span>IT Service desk announcement.</li>
-                  <li class="it-service-desk">
-                    <span class="foundicon"></span>IT Service desk announcement.</li>
-                  <li class="it-service-desk">
-                    <span class="foundicon"></span>IT Service desk announcement.</li>
+                    <span class="foundicon-tools"></span>IT Service desk announcement.</li>
                 </section>
                 <li class="twitter alert">
                   <span class="foundicon-twitter"></span>Tweet from S4S (or similar).</li>
@@ -544,9 +538,10 @@
       </script>
 
       <script type="text/template" id="servicenow-template">
-        <li class="it-service-desk">
-            <a href="https://cityunidev.service-now.com/nav_to.do?uri=<% print(FP.Helpers.parseServicenowPage(number)); %>.do?sys_id=<%= sys_id %>&sysparm_view=Default"><%= number %></a>:&nbsp;<%= short_description %>, created: <% print(FP.Helpers.atomDateParser(opened_at)); %>
-         
+        <li class="it-service-desk alert">
+          <span class="foundicon-tools"></span>
+          <%= short_description %>, created: <% print(FP.Helpers.atomDateParser(opened_at)); %>, <%= number %>, 
+          <a href="https://cityunidev.service-now.com/nav_to.do?uri=<% print(FP.Helpers.parseServicenowPage(number)); %>.do?sys_id=<%= sys_id %>&sysparm_view=Default">view</a> 
         </li>
       </script>
 
