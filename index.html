@@ -147,13 +147,13 @@
                 <a href="#">Inbox</a> | <a href="#">Calendar</a>
               </div>
               <ol class="widget-content">
-                <li>Email 1</li>
-                <li>Email 2</li>
-                <li>Email 3</li>
-                <li>Email 4</li>
-                <li>Email 5</li>
-                <li>Email 6</li>
-                <li>...</li>
+                <li><span class="foundicon-mail"></span>Email 1</li>
+                <li><span class="foundicon-mail"></span>Email 2</li>
+                <li><span class="foundicon-mail"></span>Email 3</li>
+                <li><span class="foundicon-mail"></span>Email 4</li>
+                <li><span class="foundicon-mail"></span>Email 5</li>
+                <li><span class="foundicon-mail"></span>Email 6</li>
+                <li><span class="foundicon-mail"></span>...</li>
               </ol>
             </div>
 
@@ -323,7 +323,7 @@
                 <dd><a href="#">&lt;Course name&gt;</a></dd>
                 <dd><a href="#">&lt;Department&gt;</a></dd>
               </dl>
-              <ul class="social-links">
+              <ol class="social-links">
                 <li class="twitter">twitter</li>
                 <li class="www">www</li>
                 <li class="flickr">flickr</li>
@@ -467,12 +467,12 @@
         </div>
         <div class="widget-content">
           <img src="<%= profileimageurl %>" alt="<%= firstname %>'s profile image" />
-          <ol>
+          <dl>
 
             <!-- school -->
             <% if (typeof udbschoolid !== 'undefined'
                    && udbschoolid) { %>
-            <li><%= udbschoolid %></li>
+            <dd><%= udbschoolid %></dd>
             <% } else { %>
             <!-- no school set -->
             <% } %>
@@ -480,36 +480,36 @@
             <!-- dept -->
             <% if (typeof udbdepartmentid !== 'undefined'
                    && udbdepartmentid) { %>
-            <li><%= udbdepartmentid %></li>
+            <dd><%= udbdepartmentid %></dd>
             <% } else { %>
             <!-- no department set -->
             <% } %>
 
-          </ol>
+          </dl>
           <ol class="social-links">
 
             <% if (typeof twitter !== 'undefined') { %>
-            <li class="skype"><%= skype %></li>
+            <li class="skype"><span class="socialfoundicon-skype" /><%= skype %></li>
             <% } %>
 
             <% if (typeof url !== 'undefined') { %>
-            <li class="url"><%= url %></li>
+            <li class="url"><span class="foundicon-globe" /><%= url %></li>
             <% } %>
 
             <% if (typeof flickr !== 'undefined') { %>
-            <li class="flickr"><%= flickr %></li>
+            <li class="flickr"><span class="socialfoundicon-flickr" /><%= flickr %></li>
             <% } %>
 
             <% if (typeof linkedin !== 'undefined') { %>
-            <li class="linkedin"><%= linkedin %></li>
+            <li class="linkedin"><span class="socialfoundicon-linkedin" /><%= linkedin %></li>
             <% } %>
 
             <% if (typeof facebook !== 'undefined') { %>
-            <li class="facebook"><%= facebook %></li>
+            <li class="facebook"><span class="socialfoundicon-facebook" /><%= facebook %></li>
             <% } %>
 
             <% if (typeof skype !== 'undefined') { %>
-            <li class="skype"><%= skype %></li>
+            <li class="skype"><span class="socialfoundicon-skype" /><%= skype %></li>
             <% } %>
 
           </ol>

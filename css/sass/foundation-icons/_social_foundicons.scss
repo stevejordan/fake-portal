@@ -1,6 +1,9 @@
 @import "settings";
 
 /* font-face */
+$fontFileName: "../fonts/social_foundicons";
+$fontName: "SocialFoundicons";
+$classPrefix: "socialfoundicon-";
 @include face;
 
 /* global foundicon styles */
@@ -20,8 +23,6 @@
   font-style: normal;
   text-decoration: inherit;
 }
-
-$fontName: "SocialFoundicons";
 
 /* icons */
 @include i-class(thumb-up,"000");

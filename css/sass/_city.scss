@@ -52,6 +52,7 @@ a {
         padding: 0 0.5em;
         font-size: ms(1);
 
+        position: relative;
 
         h2 {
             float: left;
@@ -144,27 +145,29 @@ dl.tabs {
     }
 }
 
-
-
-#noticeboard {
+#noticeboard, #email, #about {
     ol {
         list-style: none;
     }
+
+    li span {
+        font-size: 1.5em;
+        margin-right: 10px;
+    }
+
+}
+
+#noticeboard {
     .alert-list {
         padding-left: 0;
 
         li {
             list-style: none;
 
-            &:nth-child(odd) {
+            &:nth-of-type(odd) {
                 background: #fff;
             }
         }
-    }
-
-    li span {
-        font-size: 1.5em;
-        margin-right: 10px;
     }
 
     .major, 
@@ -182,6 +185,25 @@ dl.tabs {
         }
         
     }
+}
+
+#about {
+
+    img {
+        float:left;
+        padding: 1em;
+    }
+
+    dl { 
+        padding: 3em 1em; 
+    }
+
+    .social-links {
+
+        clear: left;
+
+    }
+
 }
 
 @import "compass/utilities/general/clearfix";
