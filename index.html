@@ -539,69 +539,6 @@
       <div id="error"></div>
 
     </div>
-    <script>
-        //need to use require func for requirejs
-        require([
-            'jquery'
-        ], function ($) {
 
-            var $windowObj = $(window),
-                windowWidth,
-                $navToggler = $('#global-nav-toggler'),
-                $globalNav = $('#global-nav1'),
-                /* resize event handlers */
-                didResize = false,
-                breakpoints = { 
-                    'tabletPortrait' : 768,
-                    'phonePortrait' : 480
-                };
-
-            function getWindowWidth(){
-                var wWidth =  Math.round($windowObj.width());
-                return wWidth;
-            }
-
-            function windowResized(windowWidth) {
-
-                if (windowWidth >= breakpoints.tabletPortrait) {
-                    $navToggler.removeClass("active");
-                    //clear any inline styles
-                    $globalNav.removeAttr("style");
-                }
-
-            }
-
-            function pageInit(){
-
-                $navToggler.bind('click', function () {
-                    $navToggler.toggleClass('active');
-                    $globalNav.slideToggle('slow', function() {
-                        $globalNav.toggleClass('active');
-                    });
-                });
-            }//pageInit
-
-            windowWidth = getWindowWidth();
-
-            $windowObj.resize(function () {
-                didResize = true;
-            });
-
-            setInterval(function() {
-                if ( didResize ) {
-                    didResize = false;
-                    var newWindowWidth = getWindowWidth();
-
-                    if (newWindowWidth !== windowWidth) {
-                        windowWidth = newWindowWidth;
-                        windowResized(windowWidth);
-                    }
-                }
-            }, 250); // setInterval
-
-            pageInit();
-
-        });
-    </script>
   </body>
 </html>
