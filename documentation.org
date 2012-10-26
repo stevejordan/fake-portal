@@ -1,15 +1,18 @@
 Documentation for the client side "portal" page
 
 * Architechture
-  From front to back end.
+  From back to front end.
 
-  1. Source --> 2. php on webapps --> Matrix rest resource --> backbone.js on client
+  1. Source --> 
+    2. php on webapps --> 
+      3. Matrix rest resource -->
+         4. backbone.js on client
 
-  the client side script (using backbone.js) makes a request to matrix
-  (to obey same domain restrictions - this might become Apache
-  proxying in future), which makes a request to a php resource on
+  the client side script (4) makes a request to matrix (3) (to obey
+  same domain restrictions - this might become Apache proxying in
+  future), which makes a request to a php resource (2) on
   webapps.city, which is responsible for getting and caching the
-  source data.
+  source data (1).
 
 * Codebase
   The frontend is done using [[http://backbonejs.org/][backbone.js]], which is an MV*
@@ -87,3 +90,26 @@ Documentation for the client side "portal" page
 cd /web/docs/webapps/portal-poc
 git pull
   #+END_SRC
+  
+
+* Advantages to client side aproach
+
+** Standards
+   open web standards that are practised by a large pool of
+   people. Which could quickly and cheaply lead to team expansion with
+   contractors/extra headcount.
+** skills
+   in house dev expertise can already handle the work.
+** Development environment
+   no expensive software needed (in contrast to RAD), only requires a
+   lightweight local dev environment - no compilation stage.
+** Quick to iterate
+   ideas can very cheaply be worked up and tested.
+** Mobile ready
+   small screen display baked in from the start
+** Loose coupling
+   it is very loosely coupled with Matrix and could easily sit
+   directly in front of Moodle, or another backend system.
+** SSO
+   only depends on which backend system it serves. If the backend is
+   setup to accept it, it will work.
