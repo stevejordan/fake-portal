@@ -156,7 +156,15 @@ define([
                     .appendTo($('#' + modelName + '-table tbody'));
             }
 
-        }
+        },
+
+        parseServicenowPage : function (number) {
+
+            var url = (number.indexOf('INC') !== -1)? 'incident' : 'sc_request';        
+
+            return url;
+
+        },
 
     };
 

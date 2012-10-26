@@ -29,6 +29,8 @@ define([
             var prefixedUrl = (/localhost|webapps/.test(document.location.host)) ?
                 'https://www.dev.city.ac.uk/portal-poc/' : '';
 
+var prefixedUrl = ''; //TODO REMOVE
+
             if (this.urlfragment) {
                 
                 prefixedUrl += (typeof this.urlfragment === 'function') ?
