@@ -23,7 +23,8 @@ require.config({
                 'vendor/foundation/modernizr.foundation',
                 'vendor/foundation/jquery.placeholder',
                 'vendor/foundation/jquery.foundation.forms',
-                'vendor/foundation/jquery.foundation.tabs'
+                'vendor/foundation/jquery.foundation.tabs',
+                'vendor/foundation/jquery.foundation.reveal'
             ]
         },
         'vendor/foundation/jquery.placeholder': { deps: ['jquery'] },
@@ -37,8 +38,8 @@ require.config({
 });
 
 require([
-    'views/fakeportal', 'namespace', 'foundation'
-], function (FakePortal, ns) {
+    'views/fakeportal', 'namespace', 'jquery', 'foundation'
+], function (FakePortal, ns, $) {
 
     'use strict';
 
@@ -61,10 +62,32 @@ require([
     });
 
     $("#error").bind("ajaxError", function (e, error) {
-        $(this)
-             .html('problem with ajax request for : ' + error.status + ' ' + error.statusText +
-                  (error.status === 403 ? '<br/>need to sign into <a href="https://www.dev.city.ac.uk/portal-poc/remote-services" target="new">www.dev</a>?' : ''))
-             .show()
+
+        var dialogMarkup = '';
+
+        switch (error.status) {
+
+        case 403:
+            //forbidden - log in needed
+            dialogMarkup =
+                '<p>ajax request problem (' +
+                error.statusText + ') ' +
+                '<a href="//www.dev.city.ac.uk/portal-poc/remote-services">' +
+                'Open this link</a>, then come back to this page';
+
+            break;
+
+        case 0:
+            //probably ssl cert. issue
+            dialogMarkup =
+                '<p>probably need to let browser use the temporary ssl cert.' +
+                '<a href="//www.dev.city.ac.uk/portal-poc/remote-services">' +
+                'Open this link</a>, then come back to this page';
+            break;
+
+        }
+
+        $(this).html(dialogMarkup).show()
              .click(function () {$(this).hide(); });
 
     });
