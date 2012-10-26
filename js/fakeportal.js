@@ -30,6 +30,7 @@ require.config({
         'vendor/foundation/jquery.placeholder': { deps: ['jquery'] },
         'vendor/foundation/jquery.foundation.forms': { deps: ['jquery'] },
         'vendor/foundation/jquery.foundation.tabs': { deps: ['jquery'] },
+        'vendor/foundation/jquery.foundation.reveal': { deps: ['jquery'] },
         'highcharts': {
             deps: ['jquery'],
             exports: 'Highcharts'
