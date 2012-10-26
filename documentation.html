@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Documentation for the client side "portal" page"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-10-23 15:59:33 BST"/>
+<meta name="generated" content="2012-10-26 16:53:06 BST"/>
 <meta name="author" content="Steve Jordan"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -142,6 +142,17 @@
 </li>
 <li><a href="#sec-4">4 Future data sources</a></li>
 <li><a href="#sec-5">5 git setup</a></li>
+<li><a href="#sec-6">6 Advantages to client side aproach</a>
+<ul>
+<li><a href="#sec-6-1">6.1 Standards</a></li>
+<li><a href="#sec-6-2">6.2 skills</a></li>
+<li><a href="#sec-6-3">6.3 Development environment</a></li>
+<li><a href="#sec-6-4">6.4 Quick to iterate</a></li>
+<li><a href="#sec-6-5">6.5 Mobile ready</a></li>
+<li><a href="#sec-6-6">6.6 Loose coupling</a></li>
+<li><a href="#sec-6-7">6.7 SSO</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -150,20 +161,35 @@
 <h2 id="sec-1"><span class="section-number-2">1</span> Architechture</h2>
 <div class="outline-text-2" id="text-1">
 
-<p>  From front to back end.
+<p>  From back to front end.
 </p>
 <ol>
-<li>Source &ndash;&gt; 2. php on webapps &ndash;&gt; Matrix rest resource &ndash;&gt; backbone.js on client
+<li>Source &ndash;&gt; 
+<ol>
+<li>php on webapps &ndash;&gt; 
+<ol>
+<li>Matrix rest resource &ndash;&gt;
+<ol>
+<li>backbone.js on client
+</li>
+</ol>
+
+</li>
+</ol>
+
+</li>
+</ol>
+
 </li>
 </ol>
 
 
 <p>
-  the client side script (using backbone.js) makes a request to matrix
-  (to obey same domain restrictions - this might become Apache
-  proxying in future), which makes a request to a php resource on
+  the client side script (4) makes a request to matrix (3) (to obey
+  same domain restrictions - this might become Apache proxying in
+  future), which makes a request to a php resource (2) on
   webapps.city, which is responsible for getting and caching the
-  source data.
+  source data (1).
 </p>
 </div>
 
@@ -452,12 +478,91 @@
 git pull
 </pre>
 
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Advantages to client side aproach</h2>
+<div class="outline-text-2" id="text-6">
+
+
+
+</div>
+
+<div id="outline-container-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Standards</h3>
+<div class="outline-text-3" id="text-6-1">
+
+<p>   open web standards that are practised by a large pool of
+   people. Which could quickly and cheaply lead to team expansion with
+   contractors/extra headcount.
+</p></div>
+
+</div>
+
+<div id="outline-container-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> skills</h3>
+<div class="outline-text-3" id="text-6-2">
+
+<p>   in house dev expertise can already handle the work.
+</p></div>
+
+</div>
+
+<div id="outline-container-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> Development environment</h3>
+<div class="outline-text-3" id="text-6-3">
+
+<p>   no expensive software needed (in contrast to RAD), only requires a
+   lightweight local dev environment - no compilation stage.
+</p></div>
+
+</div>
+
+<div id="outline-container-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> Quick to iterate</h3>
+<div class="outline-text-3" id="text-6-4">
+
+<p>   ideas can very cheaply be worked up and tested.
+</p></div>
+
+</div>
+
+<div id="outline-container-6-5" class="outline-3">
+<h3 id="sec-6-5"><span class="section-number-3">6.5</span> Mobile ready</h3>
+<div class="outline-text-3" id="text-6-5">
+
+<p>   small screen display baked in from the start
+</p></div>
+
+</div>
+
+<div id="outline-container-6-6" class="outline-3">
+<h3 id="sec-6-6"><span class="section-number-3">6.6</span> Loose coupling</h3>
+<div class="outline-text-3" id="text-6-6">
+
+<p>   it is very loosely coupled with Matrix and could easily sit
+   directly in front of Moodle, or another backend system.
+</p></div>
+
+</div>
+
+<div id="outline-container-6-7" class="outline-3">
+<h3 id="sec-6-7"><span class="section-number-3">6.7</span> SSO</h3>
+<div class="outline-text-3" id="text-6-7">
+
+<p>   only depends on which backend system it serves. If the backend is
+   setup to accept it, it will work.
+</p></div>
 </div>
 </div>
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2012-10-23 15:59:33 BST</p>
+<p class="date">Date: 2012-10-26 16:53:06 BST</p>
 <p class="author">Author: Steve Jordan</p>
 <p class="creator">Org version 7.8.06 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
