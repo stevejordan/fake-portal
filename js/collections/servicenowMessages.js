@@ -35,7 +35,7 @@ define([
                 ns.FakePortal.trigger('message', response.messages);
             }
 
-            return response.main.servicenowMessages;
+            return response.main.servicenowMessages.slice(0,3);
 
         },
 

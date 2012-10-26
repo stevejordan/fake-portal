@@ -74,7 +74,7 @@ define([
             ns.fines.fetch(ns.ajaxOpts);
             ns.holds.fetch(ns.ajaxOpts);
             ns.computerRooms.fetch();
-            ns.servicenowMessages.fetch();
+            ns.servicenowMessages.fetch(ns.ajaxOpts);
             ns.person = new Person();
             ns.calendar.fetch(ns.ajaxOpts);
 
