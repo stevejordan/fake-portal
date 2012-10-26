@@ -540,7 +540,10 @@
 
     </div>
     <script>
-        $(document).ready(function ($) {
+        //need to use define for requirejs
+        define([
+            'jquery'
+        ], function ($) {
 
             var $windowObj = $(window),
                 windowWidth,
@@ -565,6 +568,7 @@
                     //clear any inline styles
                     $globalNav.removeAttr("style");
                 }
+
             }
 
             function pageInit(){
