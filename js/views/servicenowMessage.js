@@ -4,7 +4,8 @@ define([
 
     var ServicenowMessageView = Backbone.View.extend({
 
-        tagName: 'div', // don't want a wrap at all really
+        tagName: 'li',
+        classes: 'it-service-desk alert',
 
         template: _.template($('#servicenow-template').html()),
 
@@ -19,6 +20,7 @@ define([
 
             this.$el
                 .html(this.template(this.model.toJSON()))
+                .addClass(this.classes)
                 .appendTo(ns.servicenowMessages.$el);
 
             //if debug also append to table

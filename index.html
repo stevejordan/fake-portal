@@ -313,7 +313,7 @@
 
         <section class="four columns">
 
-          <div id="about" class="widget">
+          <div id="about" class="widget live-data">
 	    <h2>Student Name</h2>
 
             <div class="widget-content">
@@ -538,11 +538,9 @@
       </script>
 
       <script type="text/template" id="servicenow-template">
-        <li class="it-service-desk alert">
           <span class="foundicon-tools"></span>
           <%= short_description %>, created: <% print(FP.Helpers.atomDateParser(opened_at)); %>, <%= number %>, 
           <a href="https://cityunidev.service-now.com/nav_to.do?uri=<% print(FP.Helpers.parseServicenowPage(number)); %>.do?sys_id=<%= sys_id %>&sysparm_view=Default">view</a> 
-        </li>
       </script>
 
       <script type="text/template" id="servicenow-table-template">
