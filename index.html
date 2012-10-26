@@ -118,8 +118,16 @@
                   <span class="foundicon-calendar"></span>A worthy event is happening.</li>
                 <li class="course-message alert">
                   <span class="foundicon-graph"></span>Exam or coursework result return message or alert.</li>
-                <li class="it-service-desk alert">
-                  <span class="foundicon-"></span>IT Service desk announcement.</li>
+                <section id="servicenow">
+                  <li class="it-service-desk alert">
+                    <span class="foundicon"></span>IT Service desk announcement.</li>
+                  <li class="it-service-desk">
+                    <span class="foundicon"></span>IT Service desk announcement.</li>
+                  <li class="it-service-desk">
+                    <span class="foundicon"></span>IT Service desk announcement.</li>
+                  <li class="it-service-desk">
+                    <span class="foundicon"></span>IT Service desk announcement.</li>
+                </section>
                 <li class="twitter alert">
                   <span class="foundicon-twitter"></span>Tweet from S4S (or similar).</li>
                 <li class="moodle alert">
@@ -533,6 +541,19 @@
         <td class="chart"><% var t = available + inUse;
                print( parseFloat((t / 100) * inUse).toFixed(2) ); %>%</td>
         <td><% print(available + inUse); %></td>
+      </script>
+
+      <script type="text/template" id="servicenow-template">
+        <li class="it-service-desk">
+            <a href="https://cityunidev.service-now.com/nav_to.do?uri=<% print(FP.Helpers.parseServicenowPage(number)); %>.do?sys_id=<%= sys_id %>&sysparm_view=Default"><%= number %></a>:&nbsp;<%= short_description %>, created: <% print(FP.Helpers.atomDateParser(opened_at)); %>
+         
+        </li>
+      </script>
+
+      <script type="text/template" id="servicenow-table-template">
+        <td><%= number %></td>
+        <td><%= short_description %></td>
+        <td><%= opened_at %></td>
       </script>
 
       <div id="working">Working...</div>
