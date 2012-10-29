@@ -72,7 +72,7 @@
                     <input type="hidden" name="collection" value="main-all">
                     <input type="submit" value="Search" class="s-button" id="s-button">
                 </p>
-            </form>         
+            </form>
         </div><!--#mast1-->
         <h1 id="logo">
             <a href="/">
@@ -330,7 +330,7 @@
                 <li class="linkedin">linkedin</li>
                 <li class="facebook">facebook</li>
                 <li class="skype">skype</li>
-              </ul>
+              </ol>
             </div>
           </div>
 
@@ -489,7 +489,7 @@
           <ol class="social-links">
 
             <% if (typeof twitter !== 'undefined') { %>
-            <li class="skype"><span class="socialfoundicon-skype" /><%= skype %></li>
+            <li class="twitter"><span class="socialfoundicon-twitter" /><%= twitter %></li>
             <% } %>
 
             <% if (typeof url !== 'undefined') { %>
@@ -516,12 +516,57 @@
         </div>
       </script>
 
+      <!-- form for editing #person, to be hidden-->
+      <div id="person-form" class="reveal-modal medium"></div>
+
       <script type="text/template" id="person-form-template">
+        <a class="close-reveal-modal">&#215;</a>
         <form method="post" action="">
           <fieldset>
-            <input type="upload" name="image" value="" />
-          </fieldset>
-          <fieldset>
+            <label for="image">Click the image to upload new avatar<br/>
+              <img src="<%= profileimageurl %>" alt="<%= firstname %>'s profile image" />
+              <input type="file" name="image" value="" />
+            </label>
+            <ol class="social-links">
+
+              <% if (typeof twitter !== 'undefined') { %>
+              <li><label for="twitter-field"><span class="socialfoundicon-twitter" />twitter:</label><input name="twitter-field" type="text" value="<%= twitter %>" /></li>
+              <% } else {%>
+              <li><label for="twitter-field"><span class="socialfoundicon-twitter" />twitter:</label><input name="twitter-field" type="text" value="" /></li>
+              <% } %>
+
+              <% if (typeof url !== 'undefined') { %>
+              <li><label for="url-field"><span class="foundicon-globe" />url:</label><input name="url-field" type="text" value="<%= url %>" /></li>
+              <% } else {%>
+              <li><label for="url-field"><span class="foundicon-globe" />url:</label><input name="url-field" type="text" value="" /></li>
+              <% } %>
+
+              <% if (typeof flickr !== 'undefined') { %>
+              <li><label for="flickr-field"><span class="socialfoundicon-flickr" />flickr:</label><input name="flickr-field" type="text" value="<%= flickr %>" /></li>
+              <% } else {%>
+              <li><label for="flickr-field"><span class="socialfoundicon-flickr" />flickr:</label><input name="flickr-field" type="text" value="" /></li>
+              <% } %>
+
+              <% if (typeof linkedin !== 'undefined') { %>
+              <li><label for="linkedin-field"><span class="socialfoundicon-linkedin" />linkedin:</label><input name="linkedin-field" type="text" value="<%= linkedin %>" /></li>
+              <% } else {%>
+              <li><label for="linkedin-field"><span class="socialfoundicon-linkedin" />linkedin:</label><input name="linkedin-field" type="text" value="" /></li>
+              <% } %>
+
+              <% if (typeof facebook !== 'undefined') { %>
+              <li><label for="facebook-field"><span class="socialfoundicon-facebook" />facebook:</label><input name="facebook-field" type="text" value="<%= facebook %>" /></li>
+              <% } else {%>
+              <li><label for="facebook-field"><span class="socialfoundicon-facebook" />facebook:</label><input name="facebook-field" type="text" value="" /></li>
+              <% } %>
+
+              <% if (typeof skype !== 'undefined') { %>
+              <li><label for="skype-field"><span class="socialfoundicon-skype" />skype:</label><input name="skype-field" type="text" value="<%= skype %>" /></li>
+              <% } else {%>
+              <li><label for="skype-field"><span class="socialfoundicon-skype" />skype:</label><input name="skype-field" type="text" value="" /></li>
+              <% } %>
+
+            </ol>
+            <input type="submit" name="submit" value="update my details" />
           </fieldset>
         </form>
       </script>
@@ -539,8 +584,8 @@
 
       <script type="text/template" id="servicenow-template">
           <span class="foundicon-tools"></span>
-          <%= short_description %>, created: <% print(FP.Helpers.atomDateParser(opened_at)); %>, <%= number %>, 
-          <a href="https://cityunidev.service-now.com/nav_to.do?uri=<% print(FP.Helpers.parseServicenowPage(number)); %>.do?sys_id=<%= sys_id %>&sysparm_view=Default">view</a> 
+          <%= short_description %>, created: <% print(FP.Helpers.atomDateParser(opened_at)); %>, <%= number %>,
+          <a href="https://cityunidev.service-now.com/nav_to.do?uri=<% print(FP.Helpers.parseServicenowPage(number)); %>.do?sys_id=<%= sys_id %>&sysparm_view=Default">view</a>
       </script>
 
       <script type="text/template" id="servicenow-table-template">

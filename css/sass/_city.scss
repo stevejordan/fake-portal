@@ -215,6 +215,25 @@ dl.tabs {
     }
 }
 
+//profile form
+#person-form {
+
+    //display: none;
+
+    input[name="image"] {
+        display: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    img {
+        padding: 1em 0;
+    }
+
+}
+
 @import "compass/utilities/general/clearfix";
 
 /*everything from the top of the page up to and including the site-link*/

@@ -4466,14 +4466,24 @@ dl.tabs {
   float: right;
   padding: 0 1em 1em; }
 
+/* line 223, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+#person-form input[name="image"] {
+  display: none; }
+/* line 227, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+#person-form li {
+  list-style: none; }
+/* line 231, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+#person-form img {
+  padding: 1em 0; }
+
 /*everything from the top of the page up to and including the site-link*/
-/* line 222, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 241, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #header {
   position: relative;
   overflow: visible;
   z-index: 99; }
 
-/* line 227, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 246, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #mast1 {
   margin: 0;
   padding: 0;
@@ -4503,7 +4513,7 @@ dl.tabs {
     clear: both;
     overflow: hidden;
     visibility: hidden; }
-  /* line 242, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 261, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   #mast1 #query {
     font-size: 1.2em;
     color: #333;
@@ -4511,19 +4521,19 @@ dl.tabs {
     width: 217px; }
 
 /* cross-domain nav ==================================================== */
-/* line 250, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 269, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .skip {
   left: -99999px;
   position: absolute; }
 
-/* line 254, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 273, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .skip:focus {
   left: 0;
   background-color: #FF0;
   color: #000;
   position: relative; }
 
-/* line 260, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 279, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #cross-domain-nav {
   background: #EAE9E7;
   box-shadow: 5px -5px 5px rgba(102, 102, 102, 0.1) inset;
@@ -4531,13 +4541,13 @@ dl.tabs {
   padding: 0;
   overflow: hidden; }
 
-/* line 267, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 286, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #cross-domain-nav li {
   float: left;
   list-style: none;
   padding: 0; }
 
-/* line 272, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 291, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #cross-domain-nav li a {
   color: #333;
   margin-left: 0;
@@ -4548,7 +4558,7 @@ dl.tabs {
   border: none;
   line-height: 2em; }
 
-/* line 284, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 303, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #cross-domain-nav li a:hover,
 #cross-domain-nav li a:focus,
 #cross-domain-nav li a:active {
@@ -4560,17 +4570,17 @@ dl.tabs {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s; }
 
-/* line 293, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 312, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #cross-domain-nav li a:active {
   text-decoration: none; }
 
-/* line 296, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 315, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #cross-domain-nav li.active a {
   background: #076367;
   color: #fff; }
 
 /* global nav ==================================================== */
-/* line 301, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 320, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 {
   list-style-type: none;
   font-weight: bold;
@@ -4585,23 +4595,23 @@ dl.tabs {
   width: 100%;
   z-index: 1000; }
 
-/* line 315, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 334, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 li {
   line-height: 1.2em;
   margin: 0 10px;
   display: block;
   background: #fff; }
-  /* line 321, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 340, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   #global-nav1 li:first-child {
     margin-top: 10px; }
-  /* line 324, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 343, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   #global-nav1 li:last-child {
     margin-bottom: 10px; }
-    /* line 327, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+    /* line 346, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
     #global-nav1 li:last-child a {
       border-right: none; }
 
-/* line 332, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 351, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 li a {
   text-decoration: none;
   background: transparent;
@@ -4616,18 +4626,18 @@ dl.tabs {
   font-size: 0.89em; }
 
 /*only show arrows if js is enabled*/
-/* line 347, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 366, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .js #global-nav1 li a span {
   display: block;
   background: transparent url("//s1.city.ac.uk/i/skin/icon-arrow-sprite.png") no-repeat 97% -25px;
   padding: 0px 21px 0px 0; }
 
-/* line 352, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 371, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 li:first-child a span {
   border-left: none; }
 
 /*hover, focus, active styles*/
-/* line 358, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 377, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 li a:hover,
 #global-nav1 li a:focus,
 #global-nav1 li a:active {
@@ -4636,7 +4646,7 @@ dl.tabs {
   background: #f7f7f7; }
 
 /*for selected areas when the global nav is the primary nav*/
-/* line 368, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 387, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 li.selected a:hover,
 #global-nav1 li.selected a:focus {
   background: #b02a1a;
@@ -4659,34 +4669,34 @@ dl.tabs {
   -webkit-box-shadow: inset 0 0 10px rgba(95, 14, 5, 0.8);
   box-shadow: inset 0 0 10px rgba(95, 14, 5, 0.8); }
 
-/* line 383, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 402, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .js #global-nav1 > li a:hover span,
 .js #global-nav1 > li a:focus span,
 .js #global-nav1 > li a:active span {
   background-position: 97% -25px;
   color: #fff; }
 
-/* line 387, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 406, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .js #global-nav1 > li a:active span {
   border-color: #333;
   text-shadow: none; }
 
-/* line 391, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 410, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .js #global-nav1 .active a {
   background-color: none; }
 
-/* line 394, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 413, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .js #global-nav1 .active a span {
   border-color: #333;
   color: #fff;
   background-position: 97% -25px;
   text-shadow: none; }
 
-/* line 400, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 419, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .js #global-nav1 .active .mega {
   border-left: 1px solid black; }
 
-/* line 404, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 423, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 > li.active,
 #global-nav1 > li.active:hover {
   background: #333;
@@ -4696,7 +4706,7 @@ dl.tabs {
   filter: none; }
 
 /*drop down styles*/
-/* line 419, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 438, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .drop {
   position: absolute;
   left: -999em;
@@ -4711,27 +4721,27 @@ dl.tabs {
   -moz-box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5); }
 
-/* line 433, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 452, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .drop-1col {
   width: 200px; }
 
-/* line 434, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 453, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .drop-2col {
   width: 400px; }
 
-/* line 435, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 454, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .drop-3col {
   width: 600px; }
 
-/* line 436, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 455, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .drop-4col {
   width: 800px; }
 
-/* line 437, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 456, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .drop-5col {
   width: 970px; }
 
-/* line 442, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 461, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 .drop ul,
 #global-nav1 dl,
 #index-nav .drop ul,
@@ -4742,7 +4752,7 @@ dl.tabs {
   padding: 0 20px 0 19px;
   width: 160px; }
 
-/* line 452, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 471, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 dl.first,
 #global-nav1 .drop ul.first,
 #index-nav dl.first,
@@ -4751,18 +4761,18 @@ dl.tabs {
   border: none;
   padding: 0 20px; }
 
-/* line 458, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 477, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 dl.last,
 #global-nav1 .drop ul.last {
   width: 130px; }
 
-/* line 462, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 481, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 .drop ul li,
 #index-nav .drop ul li {
   float: none;
   padding: 0 0 10px 0; }
 
-/* line 467, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 486, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 li .drop a,
 #index-nav li .drop a {
   background: #fff;
@@ -4784,7 +4794,7 @@ dl.tabs {
   color: #B02A1A;
   text-shadow: none; }
 
-/* line 488, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 507, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 li .drop a:hover,
 #index-nav li .drop a:hover {
   background: #fff;
@@ -4795,7 +4805,7 @@ dl.tabs {
   text-decoration: none;
   color: #e31b25; }
 
-/* line 500, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 519, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 li .drop a:focus,
 #index-nav li .drop a:focus,
 #global-nav1 li.active .drop a:focus,
@@ -4804,7 +4814,7 @@ dl.tabs {
   color: #fff;
   border-color: #b02a1a; }
 
-/* line 505, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 524, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 dt {
   width: auto;
   font-size: 1.4em;
@@ -4812,11 +4822,11 @@ dl.tabs {
   margin: 0 0 10px 0;
   line-height: 1.4em; }
 
-/* line 512, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 531, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 .drop dt a {
   color: #333; }
 
-/* line 515, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 534, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 dd {
   width: auto;
   padding: 0 0 0 15px;
@@ -4824,46 +4834,46 @@ dl.tabs {
   background: transparent url("http://s1.city.ac.uk/i/skin/icon-arrow-cccccc-right.png") no-repeat scroll 0 center;
   line-height: 1.5em; }
 
-/* line 522, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 541, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 dd a {
   color: #B02A1A; }
 
-/* line 528, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 547, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 .drop div {
   background: #fff;
   overflow: hidden; }
 
-/* line 532, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 551, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .drop-inner {
   background: #fff; }
 
-/* line 535, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 554, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 li .active {
   left: 0;
   top: auto; }
 
-/* line 539, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 558, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 li.research .active {
   left: 148px; }
 
-/* line 542, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 561, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 li.business .active {
   left: 244px; }
 
-/* line 545, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 564, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 li.alumni .active {
   left: 359px; }
 
-/* line 548, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 567, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 li.international .active {
   left: 439px; }
 
-/* line 551, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 570, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav1 li.about .active {
   left: 551px; }
 
 /* search ======================================*/
-/* line 555, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 574, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #search {
   padding: 4px 5px 5px 5px;
   margin: 0;
@@ -4872,11 +4882,11 @@ dl.tabs {
   z-index: 100;
   overflow: hidden;
   right: 0; }
-  /* line 564, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 583, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   #search p {
     border: 1px solid #167175;
     overflow: hidden; }
-  /* line 568, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 587, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   #search label {
     color: #fff;
     margin: 0 10px 0 0;
@@ -4885,7 +4895,7 @@ dl.tabs {
     line-height: 1em;
     display: none; }
 
-/* line 579, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 598, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #query,
 .home #index-query,
 .query {
@@ -4901,7 +4911,7 @@ dl.tabs {
   display: inline;
   margin: 0; }
 
-/* line 593, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 612, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #s-button,
 .s-button {
   margin: 0 0 0 -2px;
@@ -4919,14 +4929,14 @@ dl.tabs {
   line-height: 0; }
 
 /* utility navigation ==================================================== */
-/* line 609, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 628, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #util-nav {
   display: block;
   padding: 0;
   margin: 0;
   float: right; }
 
-/* line 615, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 634, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #util-nav li {
   display: block;
   float: left;
@@ -4936,7 +4946,7 @@ dl.tabs {
   margin: 12px 0 0 0;
   border-left: 1px solid #e7e7e7; }
 
-/* line 624, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 643, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #util-nav li a {
   font-weight: normal;
   line-height: 1em;
@@ -4946,56 +4956,56 @@ dl.tabs {
   margin: 0 10px 0 10px;
   padding: 0 0 2px 0; }
 
-/* line 633, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 652, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #util-nav li a:hover {
   text-decoration: none;
   color: #e31b25;
   border-bottom: 1px solid #fff; }
 
-/* line 638, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 657, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #util-nav li a:focus {
   color: #fff; }
 
-/* line 641, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 660, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #util-nav li:first-child {
   border-left: 0;
   margin-left: 0; }
 
-/* line 645, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 664, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #util-nav li:last-child a {
   padding-right: 0;
   margin-right: 0; }
 
-/* line 649, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 668, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #util-nav li a:active {
   background: #B02A1A;
   color: #fff; }
 
 /* Logo ========================================================================= */
-/* line 654, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 673, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #logo {
   float: left;
   clear: none;
   margin: 15px 0 0 0;
   border: none;
   padding-right: 20px; }
-  /* line 660, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 679, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   #logo a {
     border: none; }
-  /* line 664, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 683, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   #logo a:focus,
   #logo a:hover {
     background: #fff;
     border-bottom: 1px solid #e7e7e7; }
 
-/* line 669, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 688, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .hidden {
   display: none; }
 
-/* line 673, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 692, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 header {
   border-bottom: 1px solid #ccc; }
-  /* line 676, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 695, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   header h2 {
     font-family: Georgia;
     font-weight: normal;
@@ -5003,11 +5013,11 @@ header {
     float: left;
     color: #333; }
 
-/* line 686, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 705, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #content {
   padding-top: 20px; }
 
-/* line 690, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 709, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav-toggler {
   display: block;
   padding: 0 0 0 10px;
@@ -5034,12 +5044,12 @@ header {
   line-height: 34px;
   font-size: .9em; }
 
-/* line 709, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 728, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav-toggler .text {
   border-right: 1px solid #e7e7e7;
   padding-right: 10px; }
 
-/* line 713, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 732, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 .icon-responsive-nav {
   width: 15px;
   height: 10px;
@@ -5047,78 +5057,78 @@ header {
   background: transparent url("//s1.city.ac.uk/responsive/i/skin/icon-responsive-nav-ffffff.png") no-repeat 0 0;
   margin-right: 8px; }
 
-/* line 720, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+/* line 739, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
 #global-nav-toggler.active {
   background: #024246;
   border-bottom: 1px solid #024246; }
-  /* line 725, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 744, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   #global-nav-toggler.active .text {
     border-color: #024246; }
 
 @media only screen and (min-width: 480px) {
-  /* line 733, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 752, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   #logo {
     border-right: 1px solid #ccc;
     padding-right: 20px;
     -webkit-box-shadow: 4px 0px 4px -2px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px; }
 
-  /* line 739, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 758, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   header h2 {
     margin: 40px 0 0 20px; } }
 @media only screen and (min-width: 768px) {
-  /* line 746, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 765, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   #global-nav-toggler {
     display: none; }
 
-  /* line 749, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 768, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   #global-nav1 {
     display: block; }
 
-  /* line 752, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 771, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   #search {
     top: -32px; }
-    /* line 755, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+    /* line 774, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
     #search p {
       border: none; }
 
-  /* line 759, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 778, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   #global-nav1 {
     position: relative;
     top: auto;
     width: auto;
     background: transparent; }
-    /* line 764, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+    /* line 783, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
     #global-nav1 li {
       float: left;
       margin: 0;
       background: transparent;
       padding: 11px 0 11px 0px; }
-      /* line 769, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+      /* line 788, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
       #global-nav1 li a {
         border-bottom: none;
         border-right: 1px solid #fff;
         background: transparent;
         color: #fff;
         padding: 0 10px 0 9px; }
-        /* line 778, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+        /* line 797, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
         #global-nav1 li a:hover, #global-nav1 li a:focus, #global-nav1 li a:active {
           color: #FFF;
           text-decoration: underline;
           border-bottom: none!important;
           outline: none;
           background: transparent; }
-      /* line 786, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+      /* line 805, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
       #global-nav1 li:first-child {
         margin-top: 0; }
-      /* line 789, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+      /* line 808, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
       #global-nav1 li:last-child {
         margin-bottom: 0; } }
 @media only screen and (min-width: 980px) {
-  /* line 797, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+  /* line 816, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
   #search {
     top: 0; }
-    /* line 800, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
+    /* line 819, /home/sbbd168/Dropbox/webdevtest/fake-portal/repo/css/sass/_city.scss */
     #search p {
       border: 1px solid #024246; } }
 /* font-face */

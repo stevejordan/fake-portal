@@ -10,18 +10,18 @@ define([
         //and the main welcome bar
         welcomeBar: $('.welcome'),
 
+        //and the update form
+        personForm: $('#person-form'),
+
         //slogan of the week
         welcomeSlogans: [
             'Good to see you',
             'I like you the best'
         ],
 
-        events: {
-            'click .image': 'openface'
-        },
-
         template: _.template($('#person-template').html()),
         templateWelcomeBar: _.template($('#welcome-bar-template').html()),
+        templatePersonForm: _.template($('#person-form-template').html()),
 
         initialize: function () {
             this.render();
@@ -50,15 +50,35 @@ define([
                 this.templateWelcomeBar(
                     _.extend(
                         {'slogan': this.getSlogan()},
-                        this.model.toJSON()
+                        modelJson
                     )
                 )
             );
 
+            this.personForm.html(this.templatePersonForm(modelJson));
+
+            //hook up the form into reveal
+            this.insertPoint.on('click', '.edit', {form: this.personForm}, this.openform);
+
         },
 
-        openface: function () {
-            Helpers.debug('click on face!');
+        openform: function (e) {
+
+            var form = e.data.form;
+
+            form.reveal();
+
+            //hook up img click
+            form.on('click', 'img', function () {
+                form.find('input[name="image"]').click();
+            });
+
+            //neuter the submit
+            form.on('click', 'input[type="submit"]', function (e) {
+                e.preventDefault();
+                form.trigger('reveal:close');
+            });
+
         },
 
         //returns a random slogan
