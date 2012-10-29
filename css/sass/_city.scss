@@ -109,6 +109,7 @@ a {
             size: 150%;
         }
         height: 228px;
+        margin-bottom: 1em;
     }
 
     dt {
@@ -131,6 +132,7 @@ dl.tabs {
         height: $tabs_height;
         line-height: $tabs_height;
         padding: 0 10px;
+        border: none;
     }
 
 }
@@ -204,6 +206,13 @@ dl.tabs {
 
     }
 
+}
+
+#computer-labs {
+    .updated {
+        float: right;
+        padding: 0 1em 1em;
+    }
 }
 
 @import "compass/utilities/general/clearfix";
