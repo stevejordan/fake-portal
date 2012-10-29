@@ -19,6 +19,8 @@ define([
         //how to parse the response
         parse: function (response) {
 
+            var courses = [];
+
             //error checking here?
 
             if (!response.main.courses) {
@@ -35,7 +37,11 @@ define([
                 ns.FakePortal.trigger('message', response.messages);
             }
 
-            return response.main.courses.other;
+            $.each(response.main.courses, function (i, el) {
+                courses = _.union(courses,el);
+            });
+
+            return courses;
 
         },
 

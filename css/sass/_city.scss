@@ -160,6 +160,7 @@ dl.tabs {
 }
 
 #noticeboard {
+
     .alert-list {
         padding-left: 0;
 
@@ -230,6 +231,18 @@ dl.tabs {
 
     img {
         padding: 1em 0;
+    }
+
+}
+
+#modules {
+
+    dt {
+        padding-bottom: 0.25em;
+    }
+
+    dl > div {
+        padding: 0.25em 0;
     }
 
 }
